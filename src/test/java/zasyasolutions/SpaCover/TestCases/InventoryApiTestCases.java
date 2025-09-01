@@ -6,18 +6,14 @@ import zasyasolutions.SpaCover.APIHelper;
 import zasyasolutions.SpaCover.BaseTest;
 import zasyasolutions.SpaCover.ConfigReader;
 import zasyasolutions.SpaCover.TestDataProvider;
-import zasyasolutions.SpaCover.Auth.AuthManager;
+
 
 import static io.restassured.RestAssured.given;
 
 import java.util.HashMap;
 import java.util.Map;
 
-<<<<<<< HEAD:src/test/java/zasyasolutions/SpaCover/TestCases/InventoryApiTestCases.java
 public class InventoryApiTestCases extends BaseTest {
-=======
-public class SampleAPITest extends BaseTest {
->>>>>>> ad38f8988c12624d8788a1d0edf2e2bcdc057857:src/test/java/zasyasolutions/SpaCover/SampleAPITest.java
 
 	// Shared variables
 	private static String expectedQuantity;
@@ -25,7 +21,7 @@ public class SampleAPITest extends BaseTest {
 	private static String expectedInHandQuantity;
 	String webhookkey = ConfigReader.getProperty("webhook.key");
 
-	//@Test(priority = 1, description = "Get sku detail", dataProvider = "skuData", dataProviderClass = TestDataProvider.class)
+	@Test(priority = 1, description = "Get sku detail", dataProvider = "skuData", dataProviderClass = TestDataProvider.class)
 	public void getAllInventoryBySKU(String sku) {
 		logInfo("Starting test: Get inventory by SKU " + sku);// Define the SKU
 
@@ -59,7 +55,7 @@ public class SampleAPITest extends BaseTest {
 		logPass("Successfully retrieved the sku sku detail in inventory");
 	}
 
-	//@Test(priority = 2, description = "Get SKU list from inventory and inbound", dataProvider = "skuData", dataProviderClass = TestDataProvider.class)
+	@Test(priority = 2, description = "Get SKU list from inventory and inbound", dataProvider = "skuData", dataProviderClass = TestDataProvider.class)
 	public void getSkuDetailsInOurRecords(String Sku) {
 		logInfo("Starting test: Get user by ID");
 
@@ -104,24 +100,12 @@ public class SampleAPITest extends BaseTest {
 
 	}
 
-<<<<<<< HEAD:src/test/java/zasyasolutions/SpaCover/TestCases/InventoryApiTestCases.java
 	@Test(priority = 3, description = "confirm")
 	public void confirmSkuAddInBooked() {
 		logInfo("Starting test: Confirm sku and booked sku");
 		logInfo("Base URL: " + io.restassured.RestAssured.baseURI);
 		String requestBody = "{\n" + "  \"sku\": \"E2E2-55-M1-3218\",\n" + "  \"qty\": \"2\",\n"
 				+ "  \"type\": \"inventory\"\n" + "}";
-=======
-	// @Test(priority = 3, description = "confirmTheOrderAndAllocatetheQunatity")
-	public void confirmSkuAddInBooked() {
-		logInfo("Starting test: Confirm sku and booked sku");
-		logInfo("Base URL: " + io.restassured.RestAssured.baseURI);
-		String requestBody = "{\n" +
-			    "  \"sku\": \"S8-3605-M1-1239\",\n" +
-			    "  \"qty\": \"1\",\n" +
-			    "  \"type\": \"inventory\"\n" +
-			    "}";
->>>>>>> ad38f8988c12624d8788a1d0edf2e2bcdc057857:src/test/java/zasyasolutions/SpaCover/SampleAPITest.java
 
 		response = given().spec(request).header("X-Webhook-Key", webhookkey).body(requestBody).when()
 				.post("/inventory/order-confirmation");
@@ -150,26 +134,16 @@ public class SampleAPITest extends BaseTest {
 
 	}
 
-<<<<<<< HEAD:src/test/java/zasyasolutions/SpaCover/TestCases/InventoryApiTestCases.java
 	
 	@Test(priority = 4, description = "Create user using AuthManager")
     public void reverseSkuBookedQuantity() {
         logInfo("Starting test: reversing");
            // Create request body
         Map<String, Object> requestBody = new HashMap<>();
-=======
-	@Test(priority = 4, description = "Create user using AuthManager")
-	public void reverseSkuBookedQuantity() {
-		logInfo("Starting test: reversing");
-		   // Create request body
-        Map<String, Object> requestBody = new HashMap<>();
-
->>>>>>> ad38f8988c12624d8788a1d0edf2e2bcdc057857:src/test/java/zasyasolutions/SpaCover/SampleAPITest.java
         Map<String, Object> updated = new HashMap<>();
         updated.put("sku", "N6N6-85-M1-1239");
         updated.put("qty", "1");
         updated.put("type", "inventory");
-<<<<<<< HEAD:src/test/java/zasyasolutions/SpaCover/TestCases/InventoryApiTestCases.java
         Map<String, Object> newItem = new HashMap<>();
         newItem.put("sku", "N6N6-85-M1-1239");
         newItem.put("qty", "0");
@@ -184,31 +158,3 @@ public class SampleAPITest extends BaseTest {
     }
 
 }
-=======
-
-        Map<String, Object> newItem = new HashMap<>(); 
-        newItem.put("sku", "N6N6-85-M1-1239");
-        newItem.put("qty", "0");
-        newItem.put("type", "inventory");
-
-        requestBody.put("updated", updated);
-        requestBody.put("new", newItem);
-        
-        response = given().spec(request).header("X-Webhook-Key", webhookkey).body(requestBody).when()
-				.post("/inventory/order-update");  
-        
-        
-        System.out.println("Status Code: " + response.getStatusCode());
-        System.out.println("Response Body: ");
-        response.prettyPrint();
-     
-      
-    
-    }
-        
-        
-	}
-
-	
-
->>>>>>> ad38f8988c12624d8788a1d0edf2e2bcdc057857:src/test/java/zasyasolutions/SpaCover/SampleAPITest.java

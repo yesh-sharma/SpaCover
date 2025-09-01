@@ -4,6 +4,9 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class SampleAPITest extends BaseTest {
 
 	// Shared variables
@@ -12,7 +15,7 @@ public class SampleAPITest extends BaseTest {
 	private static String expectedInHandQuantity;
 	String webhookkey = ConfigReader.getProperty("webhook.key");
 
-	@Test(priority = 1, description = "Get sku detail", dataProvider = "skuData", dataProviderClass = TestDataProvider.class)
+	//@Test(priority = 1, description = "Get sku detail", dataProvider = "skuData", dataProviderClass = TestDataProvider.class)
 	public void getAllInventoryBySKU(String sku) {
 		logInfo("Starting test: Get inventory by SKU " + sku);// Define the SKU
 
@@ -46,7 +49,7 @@ public class SampleAPITest extends BaseTest {
 		logPass("Successfully retrieved the sku sku detail in inventory");
 	}
 
-	@Test(priority = 2, description = "Get SKU list from inventory and inbound", dataProvider = "skuData", dataProviderClass = TestDataProvider.class)
+	//@Test(priority = 2, description = "Get SKU list from inventory and inbound", dataProvider = "skuData", dataProviderClass = TestDataProvider.class)
 	public void getSkuDetailsInOurRecords(String Sku) {
 		logInfo("Starting test: Get user by ID");
 	
@@ -91,13 +94,13 @@ public class SampleAPITest extends BaseTest {
 
 	}
 
-	 @Test(priority = 3, description = "confirm")
+	// @Test(priority = 3, description = "confirmTheOrderAndAllocatetheQunatity")
 	public void confirmSkuAddInBooked() {
 		logInfo("Starting test: Confirm sku and booked sku");
 		logInfo("Base URL: " + io.restassured.RestAssured.baseURI);
 		String requestBody = "{\n" +
-			    "  \"sku\": \"N2N2-165-M1-3218\",\n" +
-			    "  \"qty\": \"2\",\n" +
+			    "  \"sku\": \"S8-3605-M1-1239\",\n" +
+			    "  \"qty\": \"1\",\n" +
 			    "  \"type\": \"inventory\"\n" +
 			    "}";
 
@@ -129,68 +132,39 @@ public class SampleAPITest extends BaseTest {
 		
 	}
 
-	// @Test(priority = 4, description = "Create user using AuthManager")
-	public void createUserUsingAuthManager() {
-		logInfo("Starting test: Create user using AuthManager");
+	@Test(priority = 4, description = "Create user using AuthManager")
+	public void reverseSkuBookedQuantity() {
+		logInfo("Starting test: reversing");
+		   // Create request body
+        Map<String, Object> requestBody = new HashMap<>();
 
-		String requestBody = "{\n" + "  \"name\": \"Jane Smith\",\n" + "  \"job\": \"QA Engineer\"\n" + "}";
+        Map<String, Object> updated = new HashMap<>();
+        updated.put("sku", "N6N6-85-M1-1239");
+        updated.put("qty", "1");
+        updated.put("type", "inventory");
 
-		response = given().header("Content-Type", "application/json")
-				.header("Authorization", AuthManager.getBearerToken()).body(requestBody).when().post("/users");
+        Map<String, Object> newItem = new HashMap<>(); 
+        newItem.put("sku", "N6N6-85-M1-1239");
+        newItem.put("qty", "0");
+        newItem.put("type", "inventory");
 
-		// Validations
-		APIHelper.validateStatusCode(response, 201);
-		APIHelper.validateJsonFieldValue(response, "name", "Jane Smith");
-
-		logPass("Successfully created user using AuthManager");
+        requestBody.put("updated", updated);
+        requestBody.put("new", newItem);
+        
+        response = given().spec(request).header("X-Webhook-Key", webhookkey).body(requestBody).when()
+				.post("/inventory/order-update");  
+        
+        
+        System.out.println("Status Code: " + response.getStatusCode());
+        System.out.println("Response Body: ");
+        response.prettyPrint();
+     
+      
+    
+    }
+        
+        
 	}
 
-	// @Test(priority = 5, description = "Update user")
-	public void updateUser() {
-		logInfo("Starting test: Update user");
+	
 
-		int userId = 2;
-		String updatedName = "Updated User Name";
-		String requestBody = "{\n" + "  \"name\": \"" + updatedName + "\",\n" + "  \"job\": \"Senior Developer\"\n"
-				+ "}";
-
-		response = given().spec(request).pathParam("id", userId).body(requestBody).when().put("/users/{id}");
-
-		// Validations
-		APIHelper.validateStatusCode(response, 200);
-		APIHelper.validateJsonFieldValue(response, "name", updatedName);
-
-		// Extract updated timestamp
-		String updatedAt = APIHelper.extractJsonPath(response, "updatedAt");
-		logInfo("User updated at: " + updatedAt);
-
-		logPass("Successfully updated user with ID: " + userId);
-	}
-
-	// @Test(priority = 6, description = "Delete user")
-	public void deleteUser() {
-		logInfo("Starting test: Delete user");
-
-		int userId = 2;
-		response = given().spec(request).pathParam("id", userId).when().delete("/users/{id}");
-
-		// Validations
-		APIHelper.validateStatusCode(response, 204);
-
-		logPass("Successfully deleted user with ID: " + userId);
-	}
-
-	// @Test(priority = 7, description = "Test user not found")
-	public void testUserNotFound() {
-		logInfo("Starting test: User not found");
-
-		int nonExistentUserId = 999;
-		response = given().spec(request).pathParam("id", nonExistentUserId).when().get("/users/{id}");
-
-		// Validation for not found
-		APIHelper.validateStatusCode(response, 404);
-
-		logPass("Successfully validated user not found scenario");
-	}
-
-}

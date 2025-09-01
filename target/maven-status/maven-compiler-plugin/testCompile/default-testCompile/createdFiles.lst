@@ -1,0 +1,11 @@
+zasyasolutions/SpaCover/ExtentManager.class
+zasyasolutions/SpaCover/JsonUtils.class
+zasyasolutions/SpaCover/AuthManager.class
+zasyasolutions/SpaCover/APIHelper.class
+zasyasolutions/SpaCover/AppTest.class
+zasyasolutions/SpaCover/TestDataProvider.class
+zasyasolutions/SpaCover/TestListener.class
+zasyasolutions/SpaCover/BaseTest.class
+zasyasolutions/SpaCover/ConfigReader.class
+zasyasolutions/SpaCover/SampleAPITest.class
+zasyasolutions/SpaCover/AuthenticationTest.class

@@ -6,8 +6,8 @@
       <class name="zasyasolutions.SpaCover.SampleAPITest">
         <methods>
           <include name="beforeMethod"/>
-          <include name="confirmSkuAddInBooked"/>
           <include name="setUp"/>
+          <include name="getAllInventoryBySKU" invocation-numbers="0"/>
         </methods>
       </class> <!-- zasyasolutions.SpaCover.SampleAPITest -->
     </classes>

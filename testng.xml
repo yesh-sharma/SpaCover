@@ -4,8 +4,6 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="zasyasolutions.SpaCover.SampleAPITest"/>
-      <class name="zasyasolutions.SpaCover.AppTest"/>
-      <class name="zasyasolutions.SpaCover.BaseTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

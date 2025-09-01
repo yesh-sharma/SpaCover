@@ -19,6 +19,7 @@ public class TestDataProvider {
     	
     	return new Object[][] {
     		//{"E2E2-115-M1-1104"}
+    		{"S8-3605-M1-1239"}
     		{"E2E2-55-M1-3218"}
     		
     	};

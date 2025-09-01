@@ -3,6 +3,8 @@ import com.aventstack.extentreports.ExtentTest;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import zasyasolutions.SpaCover.Auth.AuthManager;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;

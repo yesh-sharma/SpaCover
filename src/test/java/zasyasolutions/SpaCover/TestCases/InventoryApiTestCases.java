@@ -1,14 +1,20 @@
-package zasyasolutions.SpaCover;
+package zasyasolutions.SpaCover.TestCases;
 
 import org.testng.annotations.Test;
 
+import zasyasolutions.SpaCover.APIHelper;
+import zasyasolutions.SpaCover.BaseTest;
+import zasyasolutions.SpaCover.ConfigReader;
+import zasyasolutions.SpaCover.TestDataProvider;
+import zasyasolutions.SpaCover.Auth.AuthManager;
+
 import static io.restassured.RestAssured.given;
 
-public class SampleAPITest extends BaseTest {
+public class InventoryApiTestCases extends BaseTest {
 
 	// Shared variables
 	private static String expectedQuantity;
-	private static String expectedAllocatedQuantity="0";
+	private static String expectedAllocatedQuantity = "0";
 	private static String expectedInHandQuantity;
 	String webhookkey = ConfigReader.getProperty("webhook.key");
 
@@ -49,7 +55,7 @@ public class SampleAPITest extends BaseTest {
 	@Test(priority = 2, description = "Get SKU list from inventory and inbound", dataProvider = "skuData", dataProviderClass = TestDataProvider.class)
 	public void getSkuDetailsInOurRecords(String Sku) {
 		logInfo("Starting test: Get user by ID");
-	
+
 		logInfo(authToken);
 
 		String requestBody = "{\n" + "  \"sku\": [\n" + "    \"" + Sku + "\"\n" + "  ]\n" + "}";
@@ -91,15 +97,12 @@ public class SampleAPITest extends BaseTest {
 
 	}
 
-	 @Test(priority = 3, description = "confirm")
+	@Test(priority = 3, description = "confirm")
 	public void confirmSkuAddInBooked() {
 		logInfo("Starting test: Confirm sku and booked sku");
 		logInfo("Base URL: " + io.restassured.RestAssured.baseURI);
-		String requestBody = "{\n" +
-			    "  \"sku\": \"N2N2-165-M1-3218\",\n" +
-			    "  \"qty\": \"2\",\n" +
-			    "  \"type\": \"inventory\"\n" +
-			    "}";
+		String requestBody = "{\n" + "  \"sku\": \"E2E2-55-M1-3218\",\n" + "  \"qty\": \"2\",\n"
+				+ "  \"type\": \"inventory\"\n" + "}";
 
 		response = given().spec(request).header("X-Webhook-Key", webhookkey).body(requestBody).when()
 				.post("/inventory/order-confirmation");
@@ -107,26 +110,25 @@ public class SampleAPITest extends BaseTest {
 		// Validations
 		APIHelper.validateStatusCode(response, 201);
 		// ✅ Extract the updated allocatedQuantity from response
-	    String updatedAllocatedQuantity = APIHelper.extractJsonPath(response, "updated.allocatedQuantity");
-	    // ✅ Handle null/empty gracefully
-	    int previousAllocated = (expectedAllocatedQuantity == null || expectedAllocatedQuantity.isEmpty())
-	            ? 0
-	            : Integer.parseInt(expectedAllocatedQuantity);
-	    // ✅ Convert both to int and compare
-	 //   int previousAllocated = Integer.parseInt(expectedAllocatedQuantity);
-	    int updatedAllocated = Integer.parseInt(updatedAllocatedQuantity);
-	    
-	    logInfo("prevoious"+previousAllocated);
-	    logInfo("updated"+updatedAllocated);
+		String updatedAllocatedQuantity = APIHelper.extractJsonPath(response, "updated.allocatedQuantity");
+		// ✅ Handle null/empty gracefully
+		int previousAllocated = (expectedAllocatedQuantity == null || expectedAllocatedQuantity.isEmpty()) ? 0
+				: Integer.parseInt(expectedAllocatedQuantity);
+		// ✅ Convert both to int and compare
+		// int previousAllocated = Integer.parseInt(expectedAllocatedQuantity);
+		int updatedAllocated = Integer.parseInt(updatedAllocatedQuantity);
 
-	    int qty = 2;
-	    if (updatedAllocated != previousAllocated + qty) {
-	        throw new AssertionError("Allocated quantity mismatch: expected " 
-	            + (previousAllocated + qty) + " but got " + updatedAllocated);
-	    }
+		logInfo("prevoious" + previousAllocated);
+		logInfo("updated" + updatedAllocated);
+
+		int qty = 2;
+		if (updatedAllocated != previousAllocated + qty) {
+			throw new AssertionError("Allocated quantity mismatch: expected " + (previousAllocated + qty) + " but got "
+					+ updatedAllocated);
+		}
 
 		logInfo("Response:\n" + response.getBody().asPrettyString());
-		
+
 	}
 
 	// @Test(priority = 4, description = "Create user using AuthManager")

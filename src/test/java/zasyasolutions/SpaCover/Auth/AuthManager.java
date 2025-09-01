@@ -1,5 +1,7 @@
-package zasyasolutions.SpaCover;
+package zasyasolutions.SpaCover.Auth;
 import io.restassured.response.Response;
+import zasyasolutions.SpaCover.ConfigReader;
+
 import static io.restassured.RestAssured.given;
 
 public class AuthManager {

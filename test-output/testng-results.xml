@@ -2,75 +2,75 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-22T17:28:23 IST" name="Default suite" finished-at="2025-08-22T17:28:30 IST" duration-ms="7311">
+  <suite started-at="2025-08-23T17:00:49 IST" name="Default suite" finished-at="2025-08-23T17:00:52 IST" duration-ms="2939">
     <groups>
     </groups>
-    <test started-at="2025-08-22T17:28:23 IST" name="Default test" finished-at="2025-08-22T17:28:30 IST" duration-ms="7311">
-      <class name="zasyasolutions.SpaCover.SampleAPITest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:zasyasolutions.SpaCover.SampleAPITest@7e6f74c]" started-at="2025-08-22T17:28:17 IST" name="setUp" finished-at="2025-08-22T17:28:23 IST" duration-ms="5189" status="PASS">
+    <test started-at="2025-08-23T17:00:49 IST" name="Default test" finished-at="2025-08-23T17:00:52 IST" duration-ms="2939">
+      <class name="zasyasolutions.SpaCover.TestCases.InventoryApiTestCases">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@3349e9bb]" started-at="2025-08-23T17:00:47 IST" name="setUp" finished-at="2025-08-23T17:00:49 IST" duration-ms="1916" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.SampleAPITest@7e6f74c]" started-at="2025-08-22T17:28:23 IST" name="beforeMethod" finished-at="2025-08-22T17:28:23 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@3349e9bb]" started-at="2025-08-23T17:00:49 IST" name="beforeMethod" finished-at="2025-08-23T17:00:49 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void zasyasolutions.SpaCover.SampleAPITest.getAllInventoryBySKU(java.lang.String)]]>
+                <![CDATA[public void zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.getAllInventoryBySKU(java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="getAllInventoryBySKU(java.lang.String)[pri:1, instance:zasyasolutions.SpaCover.SampleAPITest@7e6f74c]" started-at="2025-08-22T17:28:23 IST" name="getAllInventoryBySKU" description="Get sku detail" data-provider="skuData" finished-at="2025-08-22T17:28:25 IST" duration-ms="2579" status="PASS">
+        <test-method signature="getAllInventoryBySKU(java.lang.String)[pri:1, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@3349e9bb]" started-at="2025-08-23T17:00:49 IST" name="getAllInventoryBySKU" description="Get sku detail" data-provider="skuData" finished-at="2025-08-23T17:00:50 IST" duration-ms="974" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[N2N2-165-M1-3218]]>
+                <![CDATA[E2E2-55-M1-3218]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllInventoryBySKU -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.SampleAPITest@7e6f74c]" started-at="2025-08-22T17:28:25 IST" name="beforeMethod" finished-at="2025-08-22T17:28:25 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@3349e9bb]" started-at="2025-08-23T17:00:50 IST" name="beforeMethod" finished-at="2025-08-23T17:00:50 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void zasyasolutions.SpaCover.SampleAPITest.getSkuDetailsInOurRecords(java.lang.String)]]>
+                <![CDATA[public void zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.getSkuDetailsInOurRecords(java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="getSkuDetailsInOurRecords(java.lang.String)[pri:2, instance:zasyasolutions.SpaCover.SampleAPITest@7e6f74c]" started-at="2025-08-22T17:28:25 IST" name="getSkuDetailsInOurRecords" description="Get SKU list from inventory and inbound" data-provider="skuData" finished-at="2025-08-22T17:28:28 IST" duration-ms="2851" status="PASS">
+        <test-method signature="getSkuDetailsInOurRecords(java.lang.String)[pri:2, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@3349e9bb]" started-at="2025-08-23T17:00:50 IST" name="getSkuDetailsInOurRecords" description="Get SKU list from inventory and inbound" data-provider="skuData" finished-at="2025-08-23T17:00:51 IST" duration-ms="970" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[N2N2-165-M1-3218]]>
+                <![CDATA[E2E2-55-M1-3218]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getSkuDetailsInOurRecords -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.SampleAPITest@7e6f74c]" started-at="2025-08-22T17:28:28 IST" name="beforeMethod" finished-at="2025-08-22T17:28:28 IST" duration-ms="1" status="PASS">
+        <test-method signature="confirmSkuAddInBooked()[pri:3, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@3349e9bb]" started-at="2025-08-23T17:00:51 IST" name="confirmSkuAddInBooked" description="confirm" finished-at="2025-08-23T17:00:52 IST" duration-ms="978" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- confirmSkuAddInBooked -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@3349e9bb]" started-at="2025-08-23T17:00:51 IST" name="beforeMethod" finished-at="2025-08-23T17:00:51 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void zasyasolutions.SpaCover.SampleAPITest.confirmSkuAddInBooked()]]>
+                <![CDATA[public void zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.confirmSkuAddInBooked()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="confirmSkuAddInBooked()[pri:3, instance:zasyasolutions.SpaCover.SampleAPITest@7e6f74c]" started-at="2025-08-22T17:28:28 IST" name="confirmSkuAddInBooked" description="confirm" finished-at="2025-08-22T17:28:30 IST" duration-ms="1780" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- confirmSkuAddInBooked -->
-      </class> <!-- zasyasolutions.SpaCover.SampleAPITest -->
+      </class> <!-- zasyasolutions.SpaCover.TestCases.InventoryApiTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

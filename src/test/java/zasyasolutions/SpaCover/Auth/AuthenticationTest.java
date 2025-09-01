@@ -1,7 +1,10 @@
-package zasyasolutions.SpaCover;
+package zasyasolutions.SpaCover.Auth;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import zasyasolutions.SpaCover.APIHelper;
+import zasyasolutions.SpaCover.BaseTest;
 
 import static io.restassured.RestAssured.given;
 

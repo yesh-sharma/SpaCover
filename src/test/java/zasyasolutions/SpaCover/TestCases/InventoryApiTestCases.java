@@ -104,7 +104,7 @@ public class InventoryApiTestCases extends BaseTest {
 	public void confirmSkuAddInBooked() {
 		logInfo("Starting test: Confirm sku and booked sku");
 		logInfo("Base URL: " + io.restassured.RestAssured.baseURI);
-		String requestBody = "{\n" + "  \"sku\": \"E2E2-55-M1-3218\",\n" + "  \"qty\": \"2\",\n"
+		String requestBody = "{\n" + "  \"sku\": \"E0X2-55-M1-3218\",\n" + "  \"qty\": \"1\",\n"
 				+ "  \"type\": \"inventory\"\n" + "}";
 
 		response = given().spec(request).header("X-Webhook-Key", webhookkey).body(requestBody).when()
@@ -124,7 +124,7 @@ public class InventoryApiTestCases extends BaseTest {
 		logInfo("prevoious" + previousAllocated);
 		logInfo("updated" + updatedAllocated);
 
-		int qty = 2;
+		int qty = 1;
 		if (updatedAllocated != previousAllocated + qty) {
 			throw new AssertionError("Allocated quantity mismatch: expected " + (previousAllocated + qty) + " but got "
 					+ updatedAllocated);
@@ -141,12 +141,12 @@ public class InventoryApiTestCases extends BaseTest {
            // Create request body
         Map<String, Object> requestBody = new HashMap<>();
         Map<String, Object> updated = new HashMap<>();
-        updated.put("sku", "N6N6-85-M1-1239");
+        updated.put("sku", "N6N6-115-M1-3132");
         updated.put("qty", "1");
         updated.put("type", "inventory");
         Map<String, Object> newItem = new HashMap<>();
         newItem.put("sku", "N6N6-85-M1-1239");
-        newItem.put("qty", "0");
+        newItem.put("qty", "1");
         newItem.put("type", "inventory");
         requestBody.put("updated", updated);
         requestBody.put("new", newItem);

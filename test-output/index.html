@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,35 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-<<<<<<< HEAD
-                        <a href="#" panel-name="suite-Default_suite" title="zasyasolutions.SpaCover.TestCases.InventoryApiTestCases" class="method navigator-link" hash-for-method="confirmSkuAddInBooked">confirmSkuAddInBooked</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="zasyasolutions.SpaCover.TestCases.InventoryApiTestCases" class="method navigator-link" hash-for-method="getSkuDetailsInOurRecords({sku=[E4E4-1, E5E4-1, E3E4-1, E6E4-1, E4E5-1, E4E3-1, E4E6-1, E5E5-1, E3E3-1, E6E6-1, E5E3-1, E5E6-1...)">getSkuDetailsInOurRecords({sku=[E4E4-1, E5E4-1, E3E4-1, E6E4-1, E4E5-1, E4E3-1, E4E6-1, E5E5-1, E3E3-1, E6E6-1, E5E3-1, E5E6-1...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="zasyasolutions.SpaCover.TestCases.InventoryApiTestCases" class="method navigator-link" hash-for-method="getAllInventoryBySKU(E2E2-55-M1-3218)">getAllInventoryBySKU(E2E2-55-M1-3218)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="zasyasolutions.SpaCover.TestCases.InventoryApiTestCases" class="method navigator-link" hash-for-method="getSkuDetailsInOurRecords(E2E2-55-M1-3218)">getSkuDetailsInOurRecords(E2E2-55-M1-3218)</a> <!-- method navigator-link -->
-=======
-                        <a href="#" panel-name="suite-Default_suite" title="zasyasolutions.SpaCover.SampleAPITest" class="method navigator-link" hash-for-method="reverseSkuBookedQuantity">reverseSkuBookedQuantity</a> <!-- method navigator-link -->
->>>>>>> ad38f8988c12624d8788a1d0edf2e2bcdc057857
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -132,55 +118,90 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">zasyasolutions.SpaCover.TestCases.InventoryApiTestCases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="reverseSkuBookedQuantity">
-                  </a> <!-- reverseSkuBookedQuantity -->
-                  <span class="method-name">reverseSkuBookedQuantity</span>
-                  <em>
-<<<<<<< HEAD
-(confirm)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getAllInventoryBySKU(E2E2-55-M1-3218)">
-                  </a> <!-- getAllInventoryBySKU(E2E2-55-M1-3218) -->
-                  <span class="method-name">getAllInventoryBySKU</span>
-                  <span class="parameters">(E2E2-55-M1-3218)</span>
-                  <em>
-(Get sku detail)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getSkuDetailsInOurRecords(E2E2-55-M1-3218)">
-                  </a> <!-- getSkuDetailsInOurRecords(E2E2-55-M1-3218) -->
+                  <a name="getSkuDetailsInOurRecords({sku=[E4E4-1, E5E4-1, E3E4-1, E6E4-1, E4E5-1, E4E3-1, E4E6-1, E5E5-1, E3E3-1, E6E6-1, E5E3-1, E5E6-1...)">
+                  </a> <!-- getSkuDetailsInOurRecords({sku=[E4E4-1, E5E4-1, E3E4-1, E6E4-1, E4E5-1, E4E3-1, E4E6-1, E5E5-1, E3E3-1, E6E6-1, E5E3-1, E5E6-1...) -->
                   <span class="method-name">getSkuDetailsInOurRecords</span>
-                  <span class="parameters">(E2E2-55-M1-3218)</span>
+                  <span class="parameters">({sku=[E4E4-1, E5E4-1, E3E4-1, E6E4-1, E4E5-1, E4E3-1, E4E6-1, E5E5-1, E3E3-1, E6E6-1, E5E3-1, E5E6-1, E3E5-1, E6E5-1]})</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+JSON path inventory.sku doesn&apos;t match.
+Expected: E4E4-1
+  Actual: &lt;[E4E4-115-M1-1104, E4E4-115-M1-1239, E4E4-115-M1-1244, E4E4-115-M1-3132, E4E4-115-M1-3218, E4E4-115-M1-3221, E4E4-115-T1-1104, E4E4-115-T1-1239, E4E4-115-T1-1244, E4E4-115-T1-3132, E4E4-115-T1-3218, E4E4-115-T1-3221, E4E4-117-M1-1239, E4E4-117-M1-1244, E4E4-165-M1-1104, E4E4-165-M1-1239, E4E4-165-M1-3132, E4E4-165-M1-3218]&gt;
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$2.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:212)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at zasyasolutions.SpaCover.APIHelper.validateJsonFieldValue(APIHelper.java:71)
+	at zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.getSkuDetailsInOurRecords(InventoryApiTestCases.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                   <em>
 (Get SKU list from inventory and inbound)                  </em>
-=======
-(Create user using AuthManager)                  </em>
->>>>>>> ad38f8988c12624d8788a1d0edf2e2bcdc057857
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-<<<<<<< HEAD
-            <span class="header-content">/private/var/folders/x9/xxt7kvhx1v7fgwvg8m4x3n6c0000gn/T/testng-eclipse-1363679586/testng-customsuite.xml</span>
-=======
-            <span class="header-content">/private/var/folders/z7/vzxb943x3kjc_dbrykdyc0lh0000gn/T/testng-eclipse-1652751605/testng-customsuite.xml</span>
->>>>>>> ad38f8988c12624d8788a1d0edf2e2bcdc057857
+            <span class="header-content">/private/var/folders/x9/xxt7kvhx1v7fgwvg8m4x3n6c0000gn/T/testng-eclipse-1831844395/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -231,32 +252,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-<<<<<<< HEAD
-data.setCell(0, 1, 'confirmSkuAddInBooked')
+data.setCell(0, 1, 'getSkuDetailsInOurRecords')
 data.setCell(0, 2, 'zasyasolutions.SpaCover.TestCases.InventoryApiTestCases')
-data.setCell(0, 3, 978);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'getAllInventoryBySKU')
-data.setCell(1, 2, 'zasyasolutions.SpaCover.TestCases.InventoryApiTestCases')
-data.setCell(1, 3, 974);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'getSkuDetailsInOurRecords')
-data.setCell(2, 2, 'zasyasolutions.SpaCover.TestCases.InventoryApiTestCases')
-data.setCell(2, 3, 970);
-=======
-data.setCell(0, 1, 'reverseSkuBookedQuantity')
-data.setCell(0, 2, 'zasyasolutions.SpaCover.SampleAPITest')
-data.setCell(0, 3, 1902);
->>>>>>> ad38f8988c12624d8788a1d0edf2e2bcdc057857
+data.setCell(0, 3, 946);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-<<<<<<< HEAD
-              <span class="suite-total-time">Total running time: 2 seconds</span>
-=======
-              <span class="suite-total-time">Total running time: 1 seconds</span>
->>>>>>> ad38f8988c12624d8788a1d0edf2e2bcdc057857
+              <span class="suite-total-time">Total running time: 946 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -288,37 +291,14 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-<<<<<<< HEAD
-                <span class="method-name">beforeMethod(public void zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.getAllInventoryBySKU(java.lang.S...)</span>
-                <span class="method-start">1926 ms</span>
+                <span class="method-name">beforeMethod(public void zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.getSkuDetailsInOurRecords(java.u...)</span>
+                <span class="method-start">1763 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">getAllInventoryBySKU(E2E2-55-M1-3218)</span>
-                <span class="method-start">1927 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.getSkuDetailsInOurRecords(java.l...)</span>
-                <span class="method-start">2903 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">getSkuDetailsInOurRecords(E2E2-55-M1-3218)</span>
-                <span class="method-start">2904 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.confirmSkuAddInBooked())</span>
-                <span class="method-start">3875 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">confirmSkuAddInBooked</span>
-                <span class="method-start">3875 ms</span>
-=======
-                <span class="method-name">beforeMethod(public void zasyasolutions.SpaCover.SampleAPITest.reverseSkuBookedQuantity())</span>
-                <span class="method-start">5108 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">reverseSkuBookedQuantity</span>
-                <span class="method-start">5113 ms</span>
->>>>>>> ad38f8988c12624d8788a1d0edf2e2bcdc057857
+                <img src="failed.png">
+                </img>
+                <span class="method-name">getSkuDetailsInOurRecords({sku=[E4E4-1, E5E4-1, E3E4-1, E6E4-1, E4E5-1, E4E3-1, E4E6-1, E5E5-1, E3E3-1, E6E6-1, E5E3-1, E5E6-1...)</span>
+                <span class="method-start">1764 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

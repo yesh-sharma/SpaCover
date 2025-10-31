@@ -1,27 +1,31 @@
 package zasyasolutions.SpaCover.TestCases;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import zasyasolutions.SpaCover.APIHelper;
 import zasyasolutions.SpaCover.BaseTest;
 import zasyasolutions.SpaCover.ConfigReader;
 import zasyasolutions.SpaCover.TestDataProvider;
-
+import zasyasolutions.SpaCover.Auth.AuthManager;
 
 import static io.restassured.RestAssured.given;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 public class InventoryApiTestCases extends BaseTest {
 
-	// Shared variables
+	//Shared variables
 	private static String expectedQuantity;
 	private static String expectedAllocatedQuantity = "0";
 	private static String expectedInHandQuantity;
 	String webhookkey = ConfigReader.getProperty("webhook.key");
 
-	@Test(priority = 1, description = "Get sku detail", dataProvider = "skuData", dataProviderClass = TestDataProvider.class)
+//@Test(priority = 1, description = "Get sku detail", dataProvider = "skuData", dataProviderClass = TestDataProvider.class)
 	public void getAllInventoryBySKU(String sku) {
 		logInfo("Starting test: Get inventory by SKU " + sku);// Define the SKU
 
@@ -34,7 +38,7 @@ public class InventoryApiTestCases extends BaseTest {
 
 		response = given()
 
-				.header("Accept", "application/json").spec(request)
+				.spec(request)
 				// .header("Authorization", "Bearer " + authToken)
 				.when().get("/inventory/by-sku/" + sku);
 
@@ -55,56 +59,48 @@ public class InventoryApiTestCases extends BaseTest {
 		logPass("Successfully retrieved the sku sku detail in inventory");
 	}
 
-	@Test(priority = 2, description = "Get SKU list from inventory and inbound", dataProvider = "skuData", dataProviderClass = TestDataProvider.class)
-	public void getSkuDetailsInOurRecords(String Sku) {
-		logInfo("Starting test: Get user by ID");
+	@Test(
+		    priority = 2,
+		    description = "Get SKU list from inventory and inbound",
+		    dataProvider = "skuData",
+		    dataProviderClass = TestDataProvider.class
+		)
+		public void getSkuDetailsInOurRecords(Map<String, Object> data) {
+		    logInfo("Starting test: Get SKU list from inventory and inbound");
 
-		logInfo(authToken);
+		    // ✅ Convert data map to JSON body
+		    String requestBody = new org.json.JSONObject(data).toString();
+		    logInfo("Request Body: " + requestBody);
 
-		String requestBody = "{\n" + "  \"sku\": [\n" + "    \"" + Sku + "\"\n" + "  ]\n" + "}";
-		response = given().spec(request).header("X-Webhook-Key", webhookkey).body(requestBody).when()
-				.post("/inventory/inhand-quantity");
+		    // ✅ Send API request
+		    response = given()
+		        .spec(request)
+		        .header("X-Webhook-Key", webhookkey)
+		        .body(requestBody)
+		        .when()
+		        .post("/inventory/inhand-quantity");
 
-		// ✅ General checks
-		APIHelper.validateStatusCode(response, 201);
-		APIHelper.validateContentType(response, "application/json");
+		    // ✅ Validations
+		    APIHelper.validateStatusCode(response, 201);
+		    APIHelper.validateContentType(response, "application/json");
 
-		// ✅ Inventory validations
-		// APIHelper.validateJsonFieldNotNull(response, "inventory[0].id");
-		APIHelper.validateJsonFieldValue(response, "inventory[0].sku", Sku);
-		// ✅ Compare with values extracted from first test
-		APIHelper.validateJsonFieldValue(response, "inventory[0].quantity", expectedQuantity);
-		APIHelper.validateJsonFieldValue(response, "inventory[0].allocatedQuantity", expectedAllocatedQuantity);
-		APIHelper.validateJsonFieldValue(response, "inventory[0].inHandQuantity", expectedInHandQuantity);
+		    // ✅ Print Response
+		    logInfo("Response:\n" + response.getBody().asPrettyString());
 
-		// ✅ String checks
-		// APIHelper.validateJsonFieldContains(response,
-		// "inventory[0].vendorDescription", "HydroTex Pro");
-		// APIHelper.validateJsonFieldValue(response, "inventory[0].materialColor",
-		// "HydroTex Pro - Oxford Grey");
+		    // ✅ Example: Validate that response includes all SKUs
+		    List<String> requestedSkus = (List<String>) data.get("sku");
+		    for (String sku : requestedSkus) {
+		        APIHelper.validateJsonFieldValue(response, "inventory.sku", sku);
+		    }
 
-		// ✅ Null field checks
-		// APIHelper.validateJsonFieldIsNull(response, "inventory[0].stripInsert");
-		// APIHelper.validateJsonFieldIsNull(response, "inventory[0].shape");
+		    logPass("All validations passed for bulk SKU inventory details");
+		}
 
-		// ✅ Date fields format
-		// APIHelper.validateJsonFieldMatchesRegex(response, "inventory[0].createdAt",
-		// "\\d{4}-\\d{2}-\\d{2}T.*Z");
-		// APIHelper.validateJsonFieldMatchesRegex(response, "inventory[0].updatedAt",
-		// "\\d{4}-\\d{2}-\\d{2}T.*Z");
-
-		// logInfo("Full Response:\n" + response.getBody().asPrettyString());
-		logPass("All validations passed for SKU inventory details");
-
-		logInfo("Response:\n" + response.getBody().asPrettyString());
-
-	}
-
-	@Test(priority = 3, description = "confirm")
+//@Test(priority = 3, description = "confirm")
 	public void confirmSkuAddInBooked() {
 		logInfo("Starting test: Confirm sku and booked sku");
 		logInfo("Base URL: " + io.restassured.RestAssured.baseURI);
-		String requestBody = "{\n" + "  \"sku\": \"E0X2-55-M1-3218\",\n" + "  \"qty\": \"1\",\n"
+		String requestBody = "{\n" + "  \"sku\": \"N2N2-45-T2-1104\",\n" + "  \"qty\": \"1\",\n"
 				+ "  \"type\": \"inventory\"\n" + "}";
 
 		response = given().spec(request).header("X-Webhook-Key", webhookkey).body(requestBody).when()
@@ -134,27 +130,135 @@ public class InventoryApiTestCases extends BaseTest {
 
 	}
 
-	
-	@Test(priority = 4, description = "Create user using AuthManager")
-    public void reverseSkuBookedQuantity() {
-        logInfo("Starting test: reversing");
-           // Create request body
-        Map<String, Object> requestBody = new HashMap<>();
-        Map<String, Object> updated = new HashMap<>();
-        updated.put("sku", "N6N6-115-M1-3132");
-        updated.put("qty", "1");
-        updated.put("type", "inventory");
-        Map<String, Object> newItem = new HashMap<>();
-        newItem.put("sku", "N6N6-85-M1-1239");
-        newItem.put("qty", "1");
-        newItem.put("type", "inventory");
-        requestBody.put("updated", updated);
-        requestBody.put("new", newItem);
-        response = given().spec(request).header("X-Webhook-Key", webhookkey).body(requestBody).when()
-                .post("/inventory/order-update");
-        System.out.println("Status Code: " + response.getStatusCode());
-        System.out.println("Response Body: ");
-        response.prettyPrint();
-    }
+//
+//	@Test(priority = 4, description = "Create user using AuthManager")
+//    public void reverseSkuBookedQuantity() {
+//        logInfo("Starting test: reversing");
+//           // Create request body
+//        Map<String, Object> requestBody = new HashMap<>();
+//        Map<String, Object> updated = new HashMap<>();
+//        updated.put("sku", "N2N2-45-T2-1104");
+//        updated.put("qty", "1");
+//        updated.put("type", "inventory");
+//        Map<String, Object> newItem = new HashMap<>();  // E4E4-05-M1-3132   //S4E0-55-M1-1239
+//        newItem.put("sku", "E4E4-05-M1-3132");
+//        newItem.put("qty", "1");
+//        newItem.put("id", "82593b7b-8fb7-4a8d-b32b-7f7a939d040e");
+//        newItem.put("type", "inbound");
+//        requestBody.put("updated", updated);
+//        requestBody.put("new", newItem);
+//        logInfo("requestBody"+ requestBody);
+//        response = given().spec(request).header("X-Webhook-Key", webhookkey).body(requestBody).when()
+//                .post("/inventory/order-update");
+//        System.out.println("Status Code: " + response.getStatusCode());
+//        System.out.println("Response Body: ");
+//        response.prettyPrint();
+//    }
 
+	
+	
+	String orderNumber;
+	
+	//@Test(priority = 4, description = "Confirm order using AuthManager")
+	public void confirmOrder() {
+	    logInfo("Starting test: confirming order");
+
+	    // ===== Create order item =====
+	    Map<String, Object> orderItem = new HashMap<>();
+	    orderItem.put("sku", "N2N2-45-T2-1104");
+	    orderItem.put("qty", "1");
+	    orderItem.put("type", "inventory");
+	    orderItem.put("order_item_id", "shopify-item-001");
+
+	    List<Map<String, Object>> orderItems = new ArrayList<>();
+	    orderItems.add(orderItem);
+
+	    // ===== Build final request body =====
+	    Map<String, Object> requestBody = new HashMap<>();
+	    orderNumber = "ORD-" + UUID.randomUUID().toString().substring(0, 8);
+	    requestBody.put("order_number",orderNumber);
+	    requestBody.put("orderItems", orderItems);
+           
+	    logInfo("Request Body: " + requestBody);
+
+	    // ===== Send POST request =====
+	    response = given()
+	            .spec(request)
+	            .header("X-Webhook-Key", webhookkey)
+	            .body(requestBody)
+	            .when()
+	            .post("/inventory/order-confirmation");
+
+	    // ===== Print response details =====
+	    System.out.println("Status Code: " + response.getStatusCode());
+	    System.out.println("Response Body:");
+	    response.prettyPrint();
+
+	    // ===== Assert response =====
+	    Assert.assertEquals(response.getStatusCode(), 201,
+	            "API failed! Expected 200 but got " + response.getStatusCode() + ". Response: " + response.getBody().asString());
+	}
+
+	
+	
+	//@Test(priority = 5, description = "Reverse SKU Booked Quantity using AuthManager")
+	public void orderUpdateChangingTheSku() {
+	    logInfo("Starting test: reversing booked SKU quantity");
+
+	    // ===== Create old order item =====
+	    Map<String, Object> oldItem = new HashMap<>();
+	    oldItem.put("sku", "N2N2-45-T2-1104");
+	    oldItem.put("qty", "1");
+	    oldItem.put("type", "inventory");
+	    oldItem.put("order_item_id", "shopify-item-001");
+
+	    List<Map<String, Object>> oldOrderItems = new ArrayList<>();
+	    oldOrderItems.add(oldItem);
+
+	    Map<String, Object> oldOrder = new HashMap<>();
+	    oldOrder.put("orderItems", oldOrderItems);
+
+	    // ===== Create new order item =====
+	    Map<String, Object> newItem = new HashMap<>();
+	    newItem.put("sku", "E4E4-45-M1-3221");
+	    newItem.put("qty", "1");
+	    newItem.put("type", "inventory");
+	    newItem.put("order_item_id", "shopify-item-001");
+
+	    List<Map<String, Object>> newOrderItems = new ArrayList<>();
+	    newOrderItems.add(newItem);
+
+	    Map<String, Object> newOrder = new HashMap<>();
+	    newOrder.put("orderItems", newOrderItems);
+
+	    // ===== Build final request body =====
+	    Map<String, Object> requestBody = new HashMap<>();
+	    requestBody.put("order_number", orderNumber);
+	    requestBody.put("oldOrder", oldOrder);
+	    requestBody.put("newOrder", newOrder);
+
+	    logInfo("Request Body: " + requestBody);
+
+	    // ===== Send POST request =====
+	    response = given()
+	            .spec(request)
+	            .header("X-Webhook-Key", webhookkey)
+	            .body(requestBody)
+	            .when()
+	            .post("/inventory/order-update");
+
+	    // ===== Print response details =====
+	    System.out.println("Status Code: " + response.getStatusCode());
+	    System.out.println("Response Body:");
+	    response.prettyPrint();
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
 }

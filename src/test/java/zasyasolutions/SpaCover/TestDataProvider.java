@@ -1,5 +1,9 @@
 package zasyasolutions.SpaCover;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.testng.annotations.DataProvider;
 
 
@@ -16,13 +20,32 @@ public class TestDataProvider {
     
     @DataProvider(name = "skuData")
     public Object[][] provideSku() {
-    	
-    	return new Object[][] {
-    		//{"E2E2-115-M1-1104"}
-    		{"E0X2-55-M1-3218"}
-    		
-    	};
+
+        // Create the map structure similar to your JSON
+        Map<String, Object> skuData = new HashMap<>();
+        skuData.put("sku", Arrays.asList(
+                "E4E4-1",
+                "E5E4-1",
+                "E3E4-1",
+                "E6E4-1",
+                "E4E5-1",
+                "E4E3-1",
+                "E4E6-1",
+                "E5E5-1",
+                "E3E3-1",
+                "E6E6-1",
+                "E5E3-1",
+                "E5E6-1",
+                "E3E5-1",
+                "E6E5-1"
+        ));
+
+        // Wrap in Object[][] because TestNG DataProvider requires that
+        return new Object[][] {
+            { skuData }
+        };
     }
+
     
     
     

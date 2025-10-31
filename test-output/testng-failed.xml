@@ -6,7 +6,7 @@
       <class name="zasyasolutions.SpaCover.TestCases.InventoryApiTestCases">
         <methods>
           <include name="beforeMethod"/>
-          <include name="confirmSkuAddInBooked"/>
+          <include name="getSkuDetailsInOurRecords" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- zasyasolutions.SpaCover.TestCases.InventoryApiTestCases -->

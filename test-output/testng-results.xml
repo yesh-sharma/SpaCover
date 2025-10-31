@@ -1,90 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-01T17:44:16 IST" name="Default suite" finished-at="2025-09-01T17:44:22 IST" duration-ms="5634">
+  <suite started-at="2025-10-30T17:58:52 IST" name="Default suite" finished-at="2025-10-30T17:58:53 IST" duration-ms="965">
     <groups>
     </groups>
-    <test started-at="2025-09-01T17:44:16 IST" name="Default test" finished-at="2025-09-01T17:44:22 IST" duration-ms="5634">
+    <test started-at="2025-10-30T17:58:52 IST" name="Default test" finished-at="2025-10-30T17:58:53 IST" duration-ms="965">
       <class name="zasyasolutions.SpaCover.TestCases.InventoryApiTestCases">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@1573f9fc]" started-at="2025-09-01T17:44:11 IST" name="setUp" finished-at="2025-09-01T17:44:16 IST" duration-ms="5230" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@351d00c0]" started-at="2025-10-30T17:58:50 IST" name="setUp" finished-at="2025-10-30T17:58:52 IST" duration-ms="1748" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@1573f9fc]" started-at="2025-09-01T17:44:16 IST" name="beforeMethod" finished-at="2025-09-01T17:44:16 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@351d00c0]" started-at="2025-10-30T17:58:52 IST" name="beforeMethod" finished-at="2025-10-30T17:58:52 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.getAllInventoryBySKU(java.lang.String)]]>
+                <![CDATA[public void zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.getSkuDetailsInOurRecords(java.util.Map)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="getAllInventoryBySKU(java.lang.String)[pri:1, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@1573f9fc]" started-at="2025-09-01T17:44:16 IST" name="getAllInventoryBySKU" description="Get sku detail" data-provider="skuData" finished-at="2025-09-01T17:44:18 IST" duration-ms="1344" status="PASS">
+        <test-method signature="getSkuDetailsInOurRecords(java.util.Map)[pri:2, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@351d00c0]" started-at="2025-10-30T17:58:52 IST" name="getSkuDetailsInOurRecords" description="Get SKU list from inventory and inbound" data-provider="skuData" finished-at="2025-10-30T17:58:53 IST" duration-ms="946" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[E0X2-55-M1-3218]]>
+                <![CDATA[{sku=[E4E4-1, E5E4-1, E3E4-1, E6E4-1, E4E5-1, E4E3-1, E4E6-1, E5E5-1, E3E3-1, E6E6-1, E5E3-1, E5E6-1, E3E5-1, E6E5-1]}]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAllInventoryBySKU -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@1573f9fc]" started-at="2025-09-01T17:44:18 IST" name="beforeMethod" finished-at="2025-09-01T17:44:18 IST" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.getSkuDetailsInOurRecords(java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="getSkuDetailsInOurRecords(java.lang.String)[pri:2, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@1573f9fc]" started-at="2025-09-01T17:44:18 IST" name="getSkuDetailsInOurRecords" description="Get SKU list from inventory and inbound" data-provider="skuData" finished-at="2025-09-01T17:44:19 IST" duration-ms="1320" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[E0X2-55-M1-3218]]>
-              </value>
-            </param>
-          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+JSON path inventory.sku doesn't match.
+Expected: E4E4-1
+  Actual: <[E4E4-115-M1-1104, E4E4-115-M1-1239, E4E4-115-M1-1244, E4E4-115-M1-3132, E4E4-115-M1-3218, E4E4-115-M1-3221, E4E4-115-T1-1104, E4E4-115-T1-1239, E4E4-115-T1-1244, E4E4-115-T1-3132, E4E4-115-T1-3218, E4E4-115-T1-3221, E4E4-117-M1-1239, E4E4-117-M1-1244, E4E4-165-M1-1104, E4E4-165-M1-1239, E4E4-165-M1-3132, E4E4-165-M1-3218]>
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+JSON path inventory.sku doesn't match.
+Expected: E4E4-1
+  Actual: <[E4E4-115-M1-1104, E4E4-115-M1-1239, E4E4-115-M1-1244, E4E4-115-M1-3132, E4E4-115-M1-3218, E4E4-115-M1-3221, E4E4-115-T1-1104, E4E4-115-T1-1239, E4E4-115-T1-1244, E4E4-115-T1-3132, E4E4-115-T1-3218, E4E4-115-T1-3221, E4E4-117-M1-1239, E4E4-117-M1-1244, E4E4-165-M1-1104, E4E4-165-M1-1239, E4E4-165-M1-3132, E4E4-165-M1-3218]>
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+at io.restassured.specification.ResponseSpecification$body$2.callCurrent(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:212)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+at zasyasolutions.SpaCover.APIHelper.validateJsonFieldValue(APIHelper.java:71)
+at zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.getSkuDetailsInOurRecords(InventoryApiTestCases.java:93)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getSkuDetailsInOurRecords -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@1573f9fc]" started-at="2025-09-01T17:44:19 IST" name="beforeMethod" finished-at="2025-09-01T17:44:19 IST" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.confirmSkuAddInBooked()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="confirmSkuAddInBooked()[pri:3, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@1573f9fc]" started-at="2025-09-01T17:44:19 IST" name="confirmSkuAddInBooked" description="confirm" finished-at="2025-09-01T17:44:20 IST" duration-ms="1066" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- confirmSkuAddInBooked -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@1573f9fc]" started-at="2025-09-01T17:44:20 IST" name="beforeMethod" finished-at="2025-09-01T17:44:20 IST" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.reverseSkuBookedQuantity()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="reverseSkuBookedQuantity()[pri:4, instance:zasyasolutions.SpaCover.TestCases.InventoryApiTestCases@1573f9fc]" started-at="2025-09-01T17:44:20 IST" name="reverseSkuBookedQuantity" description="Create user using AuthManager" finished-at="2025-09-01T17:44:22 IST" duration-ms="1723" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reverseSkuBookedQuantity -->
       </class> <!-- zasyasolutions.SpaCover.TestCases.InventoryApiTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

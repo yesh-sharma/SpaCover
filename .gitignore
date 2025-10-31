@@ -1,1 +1,27 @@
-/target/
+# Mac system files
+.DS_Store
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA files (optional, if you open in IntelliJ later)
+.idea/
+*.iml
+*.iws
+
+# Maven target folder (compiled classes)
+target/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# OS generated files
+Thumbs.db
+

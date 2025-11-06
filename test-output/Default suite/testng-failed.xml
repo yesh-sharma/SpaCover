@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="zasyasolutions.SpaCover.TestCases.InventoryApiTestCases">
+      <class name="zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory">
         <methods>
           <include name="beforeMethod"/>
-          <include name="getSkuDetailsInOurRecords" invocation-numbers="0"/>
+          <include name="scanOut"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- zasyasolutions.SpaCover.TestCases.InventoryApiTestCases -->
+      </class> <!-- zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

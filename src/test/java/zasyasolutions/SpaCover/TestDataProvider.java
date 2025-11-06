@@ -72,6 +72,25 @@ public class TestDataProvider {
         };
     }
     
+    
+
+    @DataProvider(name = "proData")
+    public Object[][] provideProData() {
+        // We won't bind SharedData.proNumber here (it may still be null)
+        return new Object[][] {
+            { "1a120f46-b08d-496f-8b92-6c98937c69a2", "1" },
+            { "6d6321a0-dc63-47a9-b250-b7a15a0dd844", "1" },
+            { "6d6321a0-dc63-47a9-b250-b7a15a0dd844", "1" },
+        };
+    }
+    
+    @DataProvider(name = "sku")
+    public Object[][] skuData() {
+        return new Object[][] {
+            {"N4N4-87-M1-3132"},
+           
+        };
+    }
     /**
      * Load test data from JSON file
      */

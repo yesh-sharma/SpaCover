@@ -241,15 +241,10 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 	 }
 	 
 	 
-	 @Test(
-		        priority = 5,
-		        dataProvider = "proData",
-		        dataProviderClass = TestDataProvider.class,
-		        description = "Assigning pro number to inventory"
- 
-			 
-			 
-			 )
+	 @Test(  priority = 5,
+		     dataProvider = "proData",
+		     dataProviderClass = TestDataProvider.class,
+		     description = "Assigning pro number to inventory")
 		    public void scanOut(String inventoryLocationId, String quantity) {
 		 
 			logInfo("Starting test: starting scan out"); 

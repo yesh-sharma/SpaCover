@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory">
+      <class name="zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound">
         <methods>
           <include name="beforeMethod"/>
-          <include name="confirmOrder"/>
           <include name="setUp"/>
+          <include name="confirmOrder"/>
         </methods>
-      </class> <!-- zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory -->
+      </class> <!-- zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

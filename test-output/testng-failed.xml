@@ -6,7 +6,7 @@
       <class name="zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory">
         <methods>
           <include name="beforeMethod"/>
-          <include name="scanOut"/>
+          <include name="confirmOrder"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory -->

@@ -28,42 +28,42 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 	private static String expectedInHandQuantity;
 	
 	
-//	
-//	@Test(priority = 1, description = "Get sku detail", dataProvider = "sku", dataProviderClass = TestDataProvider.class)
-//	public void getAllInventoryBySKU(String sku) {
-//		logInfo("Starting test: Get inventory by SKU " + sku);// Define the SKU
-//
-//		logInfo("Starting test: Get inventory by SKU" + sku);
-//		logInfo(authToken);
-//
-//		// Log the base URL for debugging
-//		logInfo("Base URL: " + io.restassured.RestAssured.baseURI);
-//		logInfo("Full URL will be: " + io.restassured.RestAssured.baseURI + "/inventory/by-sku/" + sku);
-//
-//		response = given()
-//
-//				.spec(request)
-//				// .header("Authorization", "Bearer " + authToken)
-//				.when().get("/inventory/by-sku/" + sku);
-//
-//		// Extract dynamic values
-//		expectedQuantity = APIHelper.extractJsonPath(response, "data.quantity");
-//		expectedAllocatedQuantity = APIHelper.extractJsonPath(response, "data.allocatedQuantity");
-//		expectedInHandQuantity = APIHelper.extractJsonPath(response, "data.inHandQuantity");
-//		// Validations
-//		APIHelper.validateStatusCode(response, 200);
-//		APIHelper.validateContentType(response, "application/json; charset=utf-8");
-//		APIHelper.validateResponseTime(response, 4000L);
-//
-//		// logInfo("Response: " + response.getBody().asString());
-//		//
-//
-//		logInfo("Response:\n" + response.getBody().asPrettyString());
-//		// logInfo("Response:\n" + response.getBody().prettyPrint());
-//		logPass("Successfully retrieved the sku sku detail in inventory");
-//	}
-//
-//	
+	
+	@Test(priority = 1, description = "Get sku detail", dataProvider = "sku", dataProviderClass = TestDataProvider.class)
+	public void getAllInventoryBySKU(String sku) {
+		logInfo("Starting test: Get inventory by SKU " + sku);// Define the SKU
+
+		logInfo("Starting test: Get inventory by SKU" + sku);
+		logInfo(authToken);
+
+		// Log the base URL for debugging
+		logInfo("Base URL: " + io.restassured.RestAssured.baseURI);
+		logInfo("Full URL will be: " + io.restassured.RestAssured.baseURI + "/inventory/by-sku/" + sku);
+
+		response = given()
+
+				.spec(request)
+				// .header("Authorization", "Bearer " + authToken)
+				.when().get("/inventory/by-sku/" + sku);
+
+		// Extract dynamic values
+		expectedQuantity = APIHelper.extractJsonPath(response, "data.quantity");
+		expectedAllocatedQuantity = APIHelper.extractJsonPath(response, "data.allocatedQuantity");
+		expectedInHandQuantity = APIHelper.extractJsonPath(response, "data.inHandQuantity");
+		// Validations
+		APIHelper.validateStatusCode(response, 200);
+		APIHelper.validateContentType(response, "application/json; charset=utf-8");
+		APIHelper.validateResponseTime(response, 4000L);
+
+		// logInfo("Response: " + response.getBody().asString());
+		//
+
+		logInfo("Response:\n" + response.getBody().asPrettyString());
+		// logInfo("Response:\n" + response.getBody().prettyPrint());
+		logPass("Successfully retrieved the sku sku detail in inventory");
+	}
+
+	
 	
 	
 	
@@ -82,7 +82,7 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 	
 	
 
-	 @Test(priority = 1, description = "Confirm order using AuthManager")
+	 @Test(priority = 2, description = "Confirm order with inventtory ")
 	public void confirmOrder() {
 		logInfo("Starting test: confirming order");
 
@@ -121,10 +121,15 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 	//	String Quantity = APIHelper.extractJsonPath(response, "data.quantity");
 		
 		
+		String inHandQuantity = APIHelper.extractJsonPath(response, "inventoryUpdates[1].inHandQuantity");
+		String BookedQuantity = APIHelper.extractJsonPath(response, "inventoryUpdates[1].allocatedQuantity");
 		
+		int convertedStringToIntInHand = Integer.parseInt(inHandQuantity);
+		int covertedStringToBookedQuantity= Integer.parseInt(BookedQuantity);
 		
-		// ===== Print response details =====
+		Assert.assertEquals(convertedStringToIntInHand +2 , Integer.parseInt(expectedInHandQuantity), "In-hand quantity mismatch!");
 		
+		Assert.assertEquals(covertedStringToBookedQuantity -2, Integer.parseInt(expectedAllocatedQuantity), "bookedquantity quantity mismatch!");
 		
 		
 		System.out.println("Status Code: " + response.getStatusCode());
@@ -136,7 +141,7 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 				+ response.getStatusCode() + ". Response: " + response.getBody().asString());
 	}
 
-	 @Test(priority = 2, description = "Order Update changing the order line item sku")
+	 @Test(priority = 3, description = "Order Update changing the order line item sku")
 	public void orderUpdateChangingTheSku() {
 		logInfo("Starting test: reversing booked SKU quantity");
 
@@ -184,7 +189,7 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 		response.prettyPrint();
 	}
 	 
-	 @Test(priority = 3, description = "Assigning pro number to order")
+	 @Test(priority = 4, description = "Assigning pro number to order")
 	 public void addProNumber() {
 			logInfo("Starting test: pro number assignmnet "); 
 		 
@@ -215,6 +220,19 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 		 response = given().spec(request).header("X-Webhook-Key", webhookkey).body(ArrayOfLineItems).when()
 					.post("/inventory-reference");
 
+		 
+		 
+		 String ProNumber = APIHelper.extractJsonPath(response, "[0].number");
+		 Assert.assertEquals(proNumber , ProNumber, "Pro Number Is Not Valid");
+		 
+		 String Sku1 = APIHelper.extractJsonPath(response, "[0].sku");
+		 Assert.assertEquals(Sku1 , "E0X2-55-M1-3218", "sku does not matched");
+		 
+		 String Sku2 = APIHelper.extractJsonPath(response, "[1].sku");
+		 Assert.assertEquals(Sku2 , "N4N4-87-M1-3132", "sku does not matched");
+		 
+		 
+		 
 			// ===== Print response details =====
 			System.out.println("Status Code: " + response.getStatusCode());
 			System.out.println("Response Body:" );
@@ -224,7 +242,7 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 	 
 	 
 	 @Test(
-		        priority = 4,
+		        priority = 5,
 		        dataProvider = "proData",
 		        dataProviderClass = TestDataProvider.class,
 		        description = "Assigning pro number to inventory"

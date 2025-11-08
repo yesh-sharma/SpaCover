@@ -26,7 +26,7 @@ public class ConfirmOrderWithInBound extends BaseTest{
 
 	
 
-	 @Test(priority = 2, description = "Confirm order with inventtory ")
+	 @Test(priority = 1, description = "Confirm order with inventtory ")
 	public void confirmOrder() {
 		logInfo("Starting test: confirming order");
 
@@ -70,7 +70,7 @@ public class ConfirmOrderWithInBound extends BaseTest{
 				+ response.getStatusCode() + ". Response: " + response.getBody().asString());
 	}
 
-	 @Test(priority = 3, description = "Scan in the sku from inbound")
+	 @Test(priority = 2, description = "Scan in the sku from inbound")
 	 public void scanIn() {
 	     logInfo("Starting test: scan in");
 
@@ -103,7 +103,7 @@ public class ConfirmOrderWithInBound extends BaseTest{
 	 }
 
 	 
-	 @Test(priority = 4, description = "Assigning pro number to order")
+	 @Test(priority = 3, description = "Assigning pro number to order")
 	 public void addProNumber() {
 			logInfo("Starting test: pro number assignmnet "); 
 		 
@@ -141,7 +141,7 @@ public class ConfirmOrderWithInBound extends BaseTest{
 	 }
 	 
 	 
-	 @Test(  priority = 5,
+	 @Test(  priority = 4,
 		     dataProvider = "proDataForInbound",
 		     dataProviderClass = TestDataProvider.class,
 		     description = "scan out")

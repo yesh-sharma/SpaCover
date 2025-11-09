@@ -3,7 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="zasyasolutions.SpaCover.SampleAPITest"/>
+      <class name="zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory"/>
+            <class name="zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound"/>
+
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

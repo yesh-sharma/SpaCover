@@ -109,6 +109,26 @@ public class TestDataProvider {
     }
     
     
+    @DataProvider(name = "skuInventoryInboundCustom")
+    public Object[][] skuDataforInventoryInboundCustom() {
+        return new Object[][] {
+            {"E4E4-117-M1-1244"},
+           
+        };
+    }
+    
+    @DataProvider(name = "proDataForInboundInventoryCustom")
+    public Object[][] provideProDataForInboundInventoryCustom() {
+        // We won't bind SharedData.proNumber here (it may still be null)
+        return new Object[][] {
+            { "1a120f46-b08d-496f-8b92-6c98937c69a2", "1" },
+            { "1c6411ac-13a2-48ea-b34f-ef5d1a749f47", "1" }
+        };
+    }
+    
+    
+    
+    
     /**
      * Load test data from JSON file
      */

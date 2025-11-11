@@ -29,7 +29,7 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 	
 	
 	
-	@Test(priority = 1, description = "Get sku detail", dataProvider = "sku", dataProviderClass = TestDataProvider.class)
+	@Test(priority = 1, description = "Get sku detail", dataProvider = "skuInventoryInboundCustom", dataProviderClass = TestDataProvider.class)
 	public void getAllInventoryBySKU(String sku) {
 		logInfo("Starting test: Get inventory by SKU " + sku);// Define the SKU
 
@@ -92,20 +92,31 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 		orderItem1.put("qty", "1");
 		orderItem1.put("type", "inventory");
 		InventoryLineItemId = "lineItemId-" + UUID.randomUUID().toString().substring(0, 8);
-		orderItem1.put("order_item_id",InventoryLineItemId );
+		orderItem1.put("order_item_id",InventoryLineItemId);
 		
+		// ===== Create order item =====
 		Map<String, Object> orderItem2 = new HashMap<>();
-		  orderItem2.put("sku", "E4S4-95-M1-1104");
-		     orderItem2.put("binNumber", "BIN-124");
-		     orderItem2.put("location", "CA");
-		     orderItem2.put("quantity", "1");
-		     orderItem2.put("containerNumber", "containerEarly");
+		orderItem2.put("sku", "E4S4-95-M1-1104");
+		orderItem2.put("qty", "1");
+		orderItem2.put("type", "inbound");
+		String InventoryLineItemId1 = "lineItemId-" + UUID.randomUUID().toString().substring(0, 8);
+		orderItem2.put("order_item_id",InventoryLineItemId1 );
+		orderItem2.put("id", "af2bfe6e-be8f-46c8-898e-dba83ef26859");
+		orderItem2.put("eta", "2025-11-05");
+		
+		Map<String, Object> orderItem3 = new HashMap<>();
+		orderItem3.put("sku", "E4X6-117-M1-3132");
+		orderItem3.put("qty", "1");
+		orderItem3.put("type", "custom");
+		String InventoryLineItemId2 = "lineItemId-" + UUID.randomUUID().toString().substring(0, 8);
+		orderItem3.put("order_item_id",InventoryLineItemId2 );
 		
 		
 
 		List<Map<String, Object>> orderItems = new ArrayList<>();
 		orderItems.add(orderItem1);
 		orderItems.add(orderItem2);
+		orderItems.add(orderItem3);
 		// ===== Build final request body =====
 		Map<String, Object> requestBody = new HashMap<>();
 		orderNumber = "ORD-" + UUID.randomUUID().toString().substring(0, 8);
@@ -121,15 +132,15 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 	//	String Quantity = APIHelper.extractJsonPath(response, "data.quantity");
 		
 		
-		String inHandQuantity = APIHelper.extractJsonPath(response, "inventoryUpdates[1].inHandQuantity");
-		String BookedQuantity = APIHelper.extractJsonPath(response, "inventoryUpdates[1].allocatedQuantity");
+		String inHandQuantity = APIHelper.extractJsonPath(response, "inventoryUpdates[0].inHandQuantity");
+		String BookedQuantity = APIHelper.extractJsonPath(response, "inventoryUpdates[0].allocatedQuantity");
 		
 		int convertedStringToIntInHand = Integer.parseInt(inHandQuantity);
 		int covertedStringToBookedQuantity= Integer.parseInt(BookedQuantity);
 		
-		Assert.assertEquals(convertedStringToIntInHand +2 , Integer.parseInt(expectedInHandQuantity), "In-hand quantity mismatch!");
+		Assert.assertEquals(convertedStringToIntInHand +1 , Integer.parseInt(expectedInHandQuantity), "In-hand quantity mismatch!");
 		
-		Assert.assertEquals(covertedStringToBookedQuantity -2, Integer.parseInt(expectedAllocatedQuantity), "bookedquantity quantity mismatch!");
+		Assert.assertEquals(covertedStringToBookedQuantity -1, Integer.parseInt(expectedAllocatedQuantity), "bookedquantity quantity mismatch!");
 		
 		
 		System.out.println("Status Code: " + response.getStatusCode());
@@ -141,7 +152,50 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 				+ response.getStatusCode() + ". Response: " + response.getBody().asString());
 	}
 
-	 @Test(priority = 3, description = "Order Update changing the order line item sku")
+	 @Test(priority = 3, description = "Scan in the sku from inbound")
+	 public void scanIn() {
+	     logInfo("Starting test: scan in");
+
+	     // ===== Create request body list =====
+	     List<Map<String, Object>> requestBodyList = new ArrayList<>();
+
+	     Map<String, Object> item = new HashMap<>();
+	     item.put("sku", "E4S4-95-M1-1104");
+	     item.put("binNumber", "BIN-124");
+	     item.put("location", "CA");
+	     item.put("quantity", "1");
+	     item.put("containerNumber", "containerEarly");
+
+	     requestBodyList.add(item);
+
+	     logInfo("Request Body: " + requestBodyList);
+
+	     // ===== Send POST request =====
+	     response = given()
+	             .spec(request)
+	             .header("X-Webhook-Key", webhookkey)
+	             .body(requestBodyList)
+	             .when()
+	             .post("/inventory-locations/bulk-scan-in");
+
+	     // ===== Print response details =====
+	     System.out.println("Status Code: " + response.getStatusCode());
+	     System.out.println("Response Body:");
+	     response.prettyPrint();
+	 }
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 @Test(priority = 4, description = "Order Update changing the order line item sku")
 	public void orderUpdateChangingTheSku() {
 		logInfo("Starting test: reversing booked SKU quantity");
 
@@ -189,7 +243,7 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 		response.prettyPrint();
 	}
 	 
-	 @Test(priority = 4, description = "Assigning pro number to order")
+	 @Test(priority = 5, description = "Assigning pro number to order")
 	 public void addProNumber() {
 			logInfo("Starting test: pro number assignmnet "); 
 		 
@@ -206,11 +260,12 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 		 
 		 Map<String, Object> lineItem2 = new HashMap<>();
 		 lineItem2.put("type", "PRO");
-		 lineItem2.put("sku", "N4N4-87-M1-3132");
+		 lineItem2.put("sku", "E4S4-95-M1-1104");
 		 lineItem2.put("number", proNumber);
 		 lineItem2.put("orderNumber", orderNumber);
-		 lineItem2.put("qty", 2);
+		 lineItem2.put("qty", 1);
 		 
+	 
 		 
 		 List<Map<String,Object>> ArrayOfLineItems = new  ArrayList<>();
 		 
@@ -229,7 +284,7 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 		 Assert.assertEquals(Sku1 , "E0X2-55-M1-3218", "sku does not matched");
 		 
 		 String Sku2 = APIHelper.extractJsonPath(response, "[1].sku");
-		 Assert.assertEquals(Sku2 , "N4N4-87-M1-3132", "sku does not matched");
+		 Assert.assertEquals(Sku2 , "E4S4-95-M1-1104", "sku does not matched");
 		 
 		 
 		 
@@ -241,8 +296,8 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 	 }
 	 
 	 
-	 @Test(  priority = 5,
-		     dataProvider = "proData",
+	 @Test(  priority = 6,
+		     dataProvider = "proDataForInboundInventoryCustom",
 		     dataProviderClass = TestDataProvider.class,
 		     description = "Assigning pro number to inventory")
 		    public void scanOut(String inventoryLocationId, String quantity) {

@@ -1,84 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-09T23:43:56 IST" name="Suite" finished-at="2025-11-09T23:44:11 IST" duration-ms="15329">
+  <suite started-at="2025-11-11T12:08:41 IST" name="Default suite" finished-at="2025-11-11T12:08:48 IST" duration-ms="6895">
     <groups>
     </groups>
-    <test started-at="2025-11-09T23:43:56 IST" name="Test" finished-at="2025-11-09T23:44:11 IST" duration-ms="15329">
-      <class name="zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:43:53 IST" name="setUp" finished-at="2025-11-09T23:43:56 IST" duration-ms="2480" status="PASS">
+    <test started-at="2025-11-11T12:08:41 IST" name="Default test" finished-at="2025-11-11T12:08:48 IST" duration-ms="6895">
+      <class name="zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:39 IST" name="setUp" finished-at="2025-11-11T12:08:41 IST" duration-ms="1923" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:43:56 IST" name="beforeMethod" finished-at="2025-11-09T23:43:56 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:41 IST" name="beforeMethod" finished-at="2025-11-11T12:08:41 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory.getAllInventoryBySKU(java.lang.String)]]>
+                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound.getAllInventoryBySKU(java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="getAllInventoryBySKU(java.lang.String)[pri:1, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:43:56 IST" name="getAllInventoryBySKU" description="Get sku detail" data-provider="sku" finished-at="2025-11-09T23:43:57 IST" duration-ms="1210" status="PASS">
+        <test-method signature="getAllInventoryBySKU(java.lang.String)[pri:1, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:41 IST" name="getAllInventoryBySKU" description="Get sku detail" data-provider="skuInventoryInboundCustom" finished-at="2025-11-11T12:08:42 IST" duration-ms="951" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[N4N4-87-M1-3132]]>
+                <![CDATA[E4E4-117-M1-1244]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllInventoryBySKU -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:43:57 IST" name="beforeMethod" finished-at="2025-11-09T23:43:57 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:42 IST" name="beforeMethod" finished-at="2025-11-11T12:08:42 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory.confirmOrder()]]>
+                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound.confirmOrder()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="confirmOrder()[pri:2, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:43:57 IST" name="confirmOrder" description="Confirm order with inventtory " finished-at="2025-11-09T23:43:58 IST" duration-ms="1289" status="PASS">
+        <test-method signature="confirmOrder()[pri:2, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:42 IST" name="confirmOrder" description="Confirm order with inventtory " finished-at="2025-11-11T12:08:43 IST" duration-ms="1133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- confirmOrder -->
-        <test-method signature="orderUpdateChangingTheSku()[pri:3, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:43:58 IST" name="orderUpdateChangingTheSku" description="Order Update changing the order line item sku" finished-at="2025-11-09T23:44:00 IST" duration-ms="1452" status="PASS">
+        <test-method signature="scanIn()[pri:3, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:43 IST" name="scanIn" description="Scan in the sku from inbound" finished-at="2025-11-11T12:08:44 IST" duration-ms="929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scanIn -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:43 IST" name="beforeMethod" finished-at="2025-11-11T12:08:43 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound.scanIn()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:44 IST" name="beforeMethod" finished-at="2025-11-11T12:08:44 IST" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound.orderUpdateChangingTheSku()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="orderUpdateChangingTheSku()[pri:4, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:44 IST" name="orderUpdateChangingTheSku" description="Order Update changing the order line item sku" finished-at="2025-11-11T12:08:45 IST" duration-ms="958" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- orderUpdateChangingTheSku -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:43:58 IST" name="beforeMethod" finished-at="2025-11-09T23:43:58 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:45 IST" name="beforeMethod" finished-at="2025-11-11T12:08:45 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory.orderUpdateChangingTheSku()]]>
+                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound.addProNumber()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:44:00 IST" name="beforeMethod" finished-at="2025-11-09T23:44:00 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory.addProNumber()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="addProNumber()[pri:4, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:44:00 IST" name="addProNumber" description="Assigning pro number to order" finished-at="2025-11-09T23:44:01 IST" duration-ms="1523" status="PASS">
+        <test-method signature="addProNumber()[pri:5, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:45 IST" name="addProNumber" description="Assigning pro number to order" finished-at="2025-11-11T12:08:46 IST" duration-ms="999" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProNumber -->
-        <test-method signature="scanOut(java.lang.String,java.lang.String)[pri:5, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:44:01 IST" name="scanOut" description="Assigning pro number to inventory" data-provider="proData" finished-at="2025-11-09T23:44:03 IST" duration-ms="1327" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:46 IST" name="beforeMethod" finished-at="2025-11-11T12:08:46 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound.scanOut(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="scanOut(java.lang.String,java.lang.String)[pri:6, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:46 IST" name="scanOut" description="Assigning pro number to inventory" data-provider="proDataForInboundInventoryCustom" finished-at="2025-11-11T12:08:47 IST" duration-ms="954" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -94,130 +120,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- scanOut -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:44:01 IST" name="beforeMethod" finished-at="2025-11-09T23:44:01 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:47 IST" name="beforeMethod" finished-at="2025-11-11T12:08:47 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory.scanOut(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound.scanOut(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:44:03 IST" name="beforeMethod" finished-at="2025-11-09T23:44:03 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory.scanOut(java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="scanOut(java.lang.String,java.lang.String)[pri:5, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:44:03 IST" name="scanOut" description="Assigning pro number to inventory" data-provider="proData" finished-at="2025-11-09T23:44:04 IST" duration-ms="1499" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[6d6321a0-dc63-47a9-b250-b7a15a0dd844]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- scanOut -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:44:04 IST" name="beforeMethod" finished-at="2025-11-09T23:44:04 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory.scanOut(java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="scanOut(java.lang.String,java.lang.String)[pri:5, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory@123ef382]" started-at="2025-11-09T23:44:04 IST" name="scanOut" description="Assigning pro number to inventory" data-provider="proData" finished-at="2025-11-09T23:44:06 IST" duration-ms="1434" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[6d6321a0-dc63-47a9-b250-b7a15a0dd844]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- scanOut -->
-      </class> <!-- zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory -->
-      <class name="zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound">
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound@1d9b7cce]" started-at="2025-11-09T23:44:06 IST" name="beforeMethod" finished-at="2025-11-09T23:44:06 IST" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound.confirmOrder()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="confirmOrder()[pri:1, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound@1d9b7cce]" started-at="2025-11-09T23:44:06 IST" name="confirmOrder" description="Confirm order with inventtory " finished-at="2025-11-09T23:44:07 IST" duration-ms="1445" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- confirmOrder -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound@1d9b7cce]" started-at="2025-11-09T23:44:07 IST" name="beforeMethod" finished-at="2025-11-09T23:44:07 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound.scanIn()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="scanIn()[pri:2, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound@1d9b7cce]" started-at="2025-11-09T23:44:07 IST" name="scanIn" description="Scan in the sku from inbound" finished-at="2025-11-09T23:44:08 IST" duration-ms="1203" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- scanIn -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound@1d9b7cce]" started-at="2025-11-09T23:44:08 IST" name="beforeMethod" finished-at="2025-11-09T23:44:08 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound.addProNumber()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="addProNumber()[pri:3, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound@1d9b7cce]" started-at="2025-11-09T23:44:08 IST" name="addProNumber" description="Assigning pro number to order" finished-at="2025-11-09T23:44:10 IST" duration-ms="1440" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addProNumber -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound@1d9b7cce]" started-at="2025-11-09T23:44:10 IST" name="beforeMethod" finished-at="2025-11-09T23:44:10 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound.scanOut(java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="scanOut(java.lang.String,java.lang.String)[pri:4, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound@1d9b7cce]" started-at="2025-11-09T23:44:10 IST" name="scanOut" description="scan out" data-provider="proDataForInbound" finished-at="2025-11-09T23:44:11 IST" duration-ms="1448" status="PASS">
+        <test-method signature="scanOut(java.lang.String,java.lang.String)[pri:6, instance:zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound@dbf57b3]" started-at="2025-11-11T12:08:47 IST" name="scanOut" description="Assigning pro number to inventory" data-provider="proDataForInboundInventoryCustom" finished-at="2025-11-11T12:08:48 IST" duration-ms="905" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -233,7 +147,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- scanOut -->
-      </class> <!-- zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

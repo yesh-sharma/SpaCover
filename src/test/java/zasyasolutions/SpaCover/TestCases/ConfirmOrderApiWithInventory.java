@@ -83,7 +83,7 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 	
 
 	 @Test(priority = 2, description = "Confirm order with inventtory ")
-	public void confirmOrder() {
+	public void confirmOrderAllLineItmesArefromInventory() {
 		logInfo("Starting test: confirming order");
 
 		// ===== Create order item =====
@@ -142,7 +142,7 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 	}
 
 	 @Test(priority = 3, description = "Order Update changing the order line item sku")
-	public void orderUpdateChangingTheSku() {
+	public void orderUpdateChangingOneLineItemUpdatingTheSku() {
 		logInfo("Starting test: reversing booked SKU quantity");
 
 		// ===== Create old order item =====
@@ -190,7 +190,7 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 	}
 	 
 	 @Test(priority = 4, description = "Assigning pro number to order")
-	 public void addProNumber() {
+	 public void addProNumberToOrderThatHavingLineItemsFromInvetory() {
 			logInfo("Starting test: pro number assignmnet "); 
 		 
 		 
@@ -245,7 +245,7 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 		     dataProvider = "proData",
 		     dataProviderClass = TestDataProvider.class,
 		     description = "Assigning pro number to inventory")
-		    public void scanOut(String inventoryLocationId, String quantity) {
+		    public void scanOutTheorderThatHavingAllLineItemsFromInventory(String inventoryLocationId, String quantity) {
 		 
 			logInfo("Starting test: starting scan out"); 
 		

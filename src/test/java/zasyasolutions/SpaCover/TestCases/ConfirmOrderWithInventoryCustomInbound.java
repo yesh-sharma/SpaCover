@@ -83,7 +83,7 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 	
 
 	 @Test(priority = 2, description = "Confirm order with inventtory ")
-	public void confirmOrder() {
+	public void confirmOrderThatHavingLineItemFromInventoryInboundCustom() {
 		logInfo("Starting test: confirming order");
 
 		// ===== Create order item =====
@@ -244,7 +244,7 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 	}
 	 
 	 @Test(priority = 5, description = "Assigning pro number to order")
-	 public void addProNumber() {
+	 public void addProNumberToTheOrderHavingLineItemsFromInventortInboundCustom() {
 			logInfo("Starting test: pro number assignmnet "); 
 		 
 		 

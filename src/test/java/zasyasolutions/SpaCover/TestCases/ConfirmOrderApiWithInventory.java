@@ -64,24 +64,6 @@ public class ConfirmOrderApiWithInventory extends BaseTest {
 	}
 
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 	 @Test(priority = 2, description = "Confirm order with inventtory ")
 	public void confirmOrderAllLineItmesArefromInventory() {
 		logInfo("Starting test: confirming order");

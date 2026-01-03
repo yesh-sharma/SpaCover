@@ -1,0 +1,2974 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>API Test Automation Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">REST Assured API Testing</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jan 3, 2026 10:26:22 am</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">getAllInventoryBySKU</p>
+            <p class="text-sm">
+              <span>10:26:25 am</span> / <span>00:00:01:211</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">getAllInventoryBySKU</h5>
+<span class='badge badge-success'>01.03.2026 10:26:25 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:26 am</span>
+<span class='badge badge-default'>00:00:01:211</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Get sku detail</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:25 am</td>
+        <td>
+          Test Started: getAllInventoryBySKU
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:25 am</td>
+        <td>
+          Starting test: Get inventory by SKU N4N4-87-M1-3132
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:25 am</td>
+        <td>
+          Starting test: Get inventory by SKUN4N4-87-M1-3132
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:25 am</td>
+        <td>
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhiMDFmNDllLWQzMTAtNDM2OS1hMjcxLTRkM2IwYTE1Njc5cSIsImVtYWlsIjoiZGV2ZWxvcGVyQHNlY3VyZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJmdWxsTmFtZSI6IkRldmVsb3BlciIsImlhdCI6MTc2NzQxNjE4NSwiZXhwIjoxNzY4MDIwOTg1fQ.HIBNhxcQ3KeXx0i2FHjsZ74NOorwp39oDiaN9LrTP7I
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:25 am</td>
+        <td>
+          Base URL: https://staging-inventory-api.myspacover.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:25 am</td>
+        <td>
+          Full URL will be: https://staging-inventory-api.myspacover.com/inventory/by-sku/N4N4-87-M1-3132
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:26 am</td>
+        <td>
+          Response:
+{
+    "data": {
+        "id": "7e823635-3e8e-47a8-a580-cebc594cae73",
+        "sku": "N4N4-87-M1-3132",
+        "vendorDescription": "My Spa Cover Coastal Grey 94 x 94 x 8 x 7",
+        "length": "94",
+        "width": "94",
+        "radius": "8",
+        "skirt": "7",
+        "taper": "5\"-3\"",
+        "foamDensity": "1.5",
+        "stripInsert": null,
+        "shape": null,
+        "materialNumber": "3132",
+        "materialType": "Vinyl",
+        "materialColor": "Coastal Grey",
+        "quantity": "533",
+        "allocatedQuantity": "31",
+        "inHandQuantity": "502",
+        "createdAt": "2025-09-26T09:54:55.348Z",
+        "updatedAt": "2025-12-11T05:53:33.000Z",
+        "inventoryLocations": [
+            {
+                "id": "61b948d5-bd1f-4f1d-b72e-c10ae7316b54",
+                "inventoryId": "7e823635-3e8e-47a8-a580-cebc594cae73",
+                "binNumber": "B23",
+                "location": "CA",
+                "quantity": "6",
+                "createdAt": "2025-11-06T09:43:59.282Z",
+                "updatedAt": "2025-11-10T06:29:31.000Z"
+            },
+            {
+                "id": "6d6321a0-dc63-47a9-b250-b7a15a0dd844",
+                "inventoryId": "7e823635-3e8e-47a8-a580-cebc594cae73",
+                "binNumber": "BIN224",
+                "location": "California",
+                "quantity": "527",
+                "createdAt": "2025-09-26T09:54:55.357Z",
+                "updatedAt": "2025-11-27T05:38:49.000Z"
+            }
+        ],
+        "deletedAt": null
+    }
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:26 am</td>
+        <td>
+          Successfully retrieved the sku sku detail in inventory
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:26 am</td>
+        <td>
+          <span class='badge white-text green'>getAllInventoryBySKU - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:26 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:26 am</td>
+        <td>
+          <b>Status Code:</b> 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:26 am</td>
+        <td>
+          <b>Response Time:</b> 1113 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:26 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:26 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=990<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"3de-dlLybtIDgieyrUxOWp6aRpmvUSA"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:26 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-0'></div>
+ <script>
+  function jsonTreeCreate0() { 
+   document.getElementById('code-block-json-0').innerHTML = JSONTree.create({
+    "data": {
+        "id": "7e823635-3e8e-47a8-a580-cebc594cae73",
+        "sku": "N4N4-87-M1-3132",
+        "vendorDescription": "My Spa Cover Coastal Grey 94 x 94 x 8 x 7",
+        "length": "94",
+        "width": "94",
+        "radius": "8",
+        "skirt": "7",
+        "taper": "5\"-3\"",
+        "foamDensity": "1.5",
+        "stripInsert": null,
+        "shape": null,
+        "materialNumber": "3132",
+        "materialType": "Vinyl",
+        "materialColor": "Coastal Grey",
+        "quantity": "533",
+        "allocatedQuantity": "31",
+        "inHandQuantity": "502",
+        "createdAt": "2025-09-26T09:54:55.348Z",
+        "updatedAt": "2025-12-11T05:53:33.000Z",
+        "inventoryLocations": [
+            {
+                "id": "61b948d5-bd1f-4f1d-b72e-c10ae7316b54",
+                "inventoryId": "7e823635-3e8e-47a8-a580-cebc594cae73",
+                "binNumber": "B23",
+                "location": "CA",
+                "quantity": "6",
+                "createdAt": "2025-11-06T09:43:59.282Z",
+                "updatedAt": "2025-11-10T06:29:31.000Z"
+            },
+            {
+                "id": "6d6321a0-dc63-47a9-b250-b7a15a0dd844",
+                "inventoryId": "7e823635-3e8e-47a8-a580-cebc594cae73",
+                "binNumber": "BIN224",
+                "location": "California",
+                "quantity": "527",
+                "createdAt": "2025-09-26T09:54:55.357Z",
+                "updatedAt": "2025-11-27T05:38:49.000Z"
+            }
+        ],
+        "deletedAt": null
+    }
+}); 
+  }
+  jsonTreeCreate0();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">confirmOrderAllLineItmesArefromInventory</p>
+            <p class="text-sm">
+              <span>10:26:26 am</span> / <span>00:00:01:381</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">confirmOrderAllLineItmesArefromInventory</h5>
+<span class='badge badge-success'>01.03.2026 10:26:26 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:28 am</span>
+<span class='badge badge-default'>00:00:01:381</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Confirm order with inventtory </div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:26 am</td>
+        <td>
+          Test Started: confirmOrderAllLineItmesArefromInventory
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:26 am</td>
+        <td>
+          Starting test: confirming order
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:26 am</td>
+        <td>
+          Request Body: {order_number=ORD-ebe15d0f, orderItems=[{order_item_id=lineItemId-7761e0b2, qty=1, sku=E4E4-117-M1-1244, type=inventory}, {order_item_id=lineItemId-bd26e711, qty=2, sku=N4N4-87-M1-3132, type=inventory}]}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:28 am</td>
+        <td>
+          <span class='badge white-text green'>confirmOrderAllLineItmesArefromInventory - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:28 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:28 am</td>
+        <td>
+          <b>Status Code:</b> 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:28 am</td>
+        <td>
+          <b>Response Time:</b> 1242 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:28 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:27 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=1762<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"6e2-hdVXmPqyzKLxHTpcopfg7fZFXeY"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:28 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-1'></div>
+ <script>
+  function jsonTreeCreate1() { 
+   document.getElementById('code-block-json-1').innerHTML = JSONTree.create({
+    "status": "OK",
+    "orderNumber": "ORD-ebe15d0f",
+    "orderId": "87395fc1-f03d-4e8c-acab-84fd8fa71284",
+    "isNewOrder": true,
+    "processedItems": [
+        {
+            "orderItemId": "lineItemId-7761e0b2",
+            "orderItemRecordsCreated": 1,
+            "sku": "E4E4-117-M1-1244",
+            "qty": 1,
+            "type": "inventory",
+            "status": "processed"
+        },
+        {
+            "orderItemId": "lineItemId-bd26e711",
+            "orderItemRecordsCreated": 2,
+            "sku": "N4N4-87-M1-3132",
+            "qty": 2,
+            "type": "inventory",
+            "status": "processed"
+        }
+    ],
+    "inventoryUpdates": [
+        {
+            "sku": "E4E4-117-M1-1244",
+            "type": "inventory",
+            "inHandQuantity": 198,
+            "allocatedQuantity": 1
+        },
+        {
+            "sku": "N4N4-87-M1-3132",
+            "type": "inventory",
+            "inHandQuantity": 500,
+            "allocatedQuantity": 33
+        }
+    ],
+    "totalItems": 2,
+    "totalOrderItemRecords": 3,
+    "order": {
+        "id": "87395fc1-f03d-4e8c-acab-84fd8fa71284",
+        "orderNumber": "ORD-ebe15d0f",
+        "status": "ordered",
+        "proNumber": null,
+        "orderItems": [
+            {
+                "id": "4dd3c35a-884c-4c05-a20f-662a8f36639a",
+                "orderId": "87395fc1-f03d-4e8c-acab-84fd8fa71284",
+                "shopifyOrderItemId": "lineItemId-bd26e711",
+                "sku": "N4N4-87-M1-3132",
+                "qty": 1,
+                "type": "inventory",
+                "eta": null,
+                "inboundId": null,
+                "createdAt": "2026-01-03T04:56:27.792Z",
+                "updatedAt": "2026-01-03T04:56:27.792Z"
+            },
+            {
+                "id": "e40b8b2c-229a-4f75-9869-e4fb8feb577e",
+                "orderId": "87395fc1-f03d-4e8c-acab-84fd8fa71284",
+                "shopifyOrderItemId": "lineItemId-bd26e711",
+                "sku": "N4N4-87-M1-3132",
+                "qty": 1,
+                "type": "inventory",
+                "eta": null,
+                "inboundId": null,
+                "createdAt": "2026-01-03T04:56:27.799Z",
+                "updatedAt": "2026-01-03T04:56:27.799Z"
+            },
+            {
+                "id": "fe03adb6-2435-4fbc-aebb-87ae3b0f99c2",
+                "orderId": "87395fc1-f03d-4e8c-acab-84fd8fa71284",
+                "shopifyOrderItemId": "lineItemId-7761e0b2",
+                "sku": "E4E4-117-M1-1244",
+                "qty": 1,
+                "type": "inventory",
+                "eta": null,
+                "inboundId": null,
+                "createdAt": "2026-01-03T04:56:27.777Z",
+                "updatedAt": "2026-01-03T04:56:27.777Z"
+            }
+        ],
+        "createdAt": "2026-01-03T04:56:27.754Z",
+        "updatedAt": "2026-01-03T04:56:27.754Z",
+        "deletedAt": null
+    }
+}); 
+  }
+  jsonTreeCreate1();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">orderUpdateChangingOneLineItemUpdatingTheSku</p>
+            <p class="text-sm">
+              <span>10:26:28 am</span> / <span>00:00:01:165</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">orderUpdateChangingOneLineItemUpdatingTheSku</h5>
+<span class='badge badge-success'>01.03.2026 10:26:28 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:29 am</span>
+<span class='badge badge-default'>00:00:01:165</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Order Update changing the order line item sku</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:28 am</td>
+        <td>
+          Test Started: orderUpdateChangingOneLineItemUpdatingTheSku
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:28 am</td>
+        <td>
+          Starting test: reversing booked SKU quantity
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:28 am</td>
+        <td>
+          Request Body: {oldOrder={orderItems=[{order_item_id=lineItemId-7761e0b2, qty=1, sku=E4E4-117-M1-1244, type=inventory}]}, order_number=ORD-ebe15d0f, newOrder={orderItems=[{order_item_id=lineItemId-7761e0b2, qty=1, sku=E0X2-55-M1-3218, type=inventory}]}}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:29 am</td>
+        <td>
+          <span class='badge white-text green'>orderUpdateChangingOneLineItemUpdatingTheSku - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:29 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:29 am</td>
+        <td>
+          <b>Status Code:</b> 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:29 am</td>
+        <td>
+          <b>Response Time:</b> 1152 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:29 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:29 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=2775<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"ad7-zf5BC8TBOGefEpO3ro76/R55xYc"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:29 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-2'></div>
+ <script>
+  function jsonTreeCreate2() { 
+   document.getElementById('code-block-json-2').innerHTML = JSONTree.create({
+    "status": "OK",
+    "orderNumber": "ORD-ebe15d0f",
+    "reversed": [
+        {
+            "sku": "E4E4-117-M1-1244",
+            "qty": 1,
+            "type": "inventory",
+            "result": {
+                "sku": "E4E4-117-M1-1244",
+                "reversed": {
+                    "inHandQuantity": 199,
+                    "allocatedQuantity": 0
+                },
+                "data": {
+                    "id": "a9d160a1-bed0-4c88-a85f-f164a2f85f30",
+                    "sku": "E4E4-117-M1-1244",
+                    "vendorDescription": "My Spa Cover HydroTex Pro - Brazilian Mahogany 84 x 84 x 11 x 7",
+                    "length": "84",
+                    "width": "84",
+                    "radius": "11",
+                    "skirt": "7",
+                    "taper": "5\"-3\"",
+                    "foamDensity": "1.5",
+                    "stripInsert": null,
+                    "shape": null,
+                    "materialNumber": "1244",
+                    "materialType": "Fabric",
+                    "materialColor": "HydroTex Pro - Brazilian Mahogany",
+                    "quantity": "199",
+                    "allocatedQuantity": "0",
+                    "inHandQuantity": "199",
+                    "createdAt": "2025-09-30T11:12:55.434Z",
+                    "updatedAt": "2026-01-03T04:56:28.000Z",
+                    "deletedAt": null
+                }
+            }
+        }
+    ],
+    "applied": [
+        {
+            "sku": "E0X2-55-M1-3218",
+            "qty": 1,
+            "type": "inventory",
+            "orderItemRecordsCreated": 1,
+            "result": {
+                "sku": "E0X2-55-M1-3218",
+                "applied": {
+                    "inHandQuantity": 536,
+                    "allocatedQuantity": 6
+                },
+                "data": {
+                    "id": "d48e1e91-9632-4be6-8577-ade83ce553c4",
+                    "sku": "E0X2-55-M1-3218",
+                    "vendorDescription": "My Spa Cover Mayan Brown 80 x 62 x 5 x 5",
+                    "length": "80",
+                    "width": "62",
+                    "radius": "5",
+                    "skirt": "5",
+                    "taper": "5\"-3\"",
+                    "foamDensity": "1.5",
+                    "stripInsert": "",
+                    "shape": "Rectangle Rounded",
+                    "materialNumber": "3218",
+                    "materialType": "Vinyl",
+                    "materialColor": "Mayan Brown",
+                    "quantity": "542",
+                    "allocatedQuantity": "6",
+                    "inHandQuantity": "536",
+                    "createdAt": "2025-09-06T06:23:38.715Z",
+                    "updatedAt": "2026-01-03T04:56:28.000Z",
+                    "deletedAt": null
+                }
+            }
+        }
+    ],
+    "summary": {
+        "orderNumber": "ORD-ebe15d0f",
+        "itemsSummary": [
+            {
+                "sku": "E0X2-55-M1-3218",
+                "oldQty": 0,
+                "newQty": 1,
+                "quantityChange": 1,
+                "oldType": "N/A",
+                "newType": "inventory",
+                "typeChanged": true
+            }
+        ],
+        "totalOldItems": 1,
+        "totalNewItems": 1
+    },
+    "order": {
+        "id": "87395fc1-f03d-4e8c-acab-84fd8fa71284",
+        "orderNumber": "ORD-ebe15d0f",
+        "status": "ordered",
+        "proNumber": null,
+        "orderItems": [
+            {
+                "id": "4271d33b-cc4c-4336-886b-e28313211f20",
+                "orderId": "87395fc1-f03d-4e8c-acab-84fd8fa71284",
+                "shopifyOrderItemId": "lineItemId-7761e0b2",
+                "sku": "E0X2-55-M1-3218",
+                "qty": 1,
+                "type": "inventory",
+                "eta": null,
+                "inboundId": null,
+                "createdAt": "2026-01-03T04:56:29.007Z",
+                "updatedAt": "2026-01-03T04:56:29.007Z"
+            },
+            {
+                "id": "4dd3c35a-884c-4c05-a20f-662a8f36639a",
+                "orderId": "87395fc1-f03d-4e8c-acab-84fd8fa71284",
+                "shopifyOrderItemId": "lineItemId-bd26e711",
+                "sku": "N4N4-87-M1-3132",
+                "qty": 1,
+                "type": "inventory",
+                "eta": null,
+                "inboundId": null,
+                "createdAt": "2026-01-03T04:56:27.792Z",
+                "updatedAt": "2026-01-03T04:56:27.792Z"
+            },
+            {
+                "id": "e40b8b2c-229a-4f75-9869-e4fb8feb577e",
+                "orderId": "87395fc1-f03d-4e8c-acab-84fd8fa71284",
+                "shopifyOrderItemId": "lineItemId-bd26e711",
+                "sku": "N4N4-87-M1-3132",
+                "qty": 1,
+                "type": "inventory",
+                "eta": null,
+                "inboundId": null,
+                "createdAt": "2026-01-03T04:56:27.799Z",
+                "updatedAt": "2026-01-03T04:56:27.799Z"
+            }
+        ],
+        "createdAt": "2026-01-03T04:56:27.754Z",
+        "updatedAt": "2026-01-03T04:56:27.754Z",
+        "deletedAt": null
+    }
+}); 
+  }
+  jsonTreeCreate2();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">addProNumberToOrderThatHavingLineItemsFromInvetory</p>
+            <p class="text-sm">
+              <span>10:26:29 am</span> / <span>00:00:01:064</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">addProNumberToOrderThatHavingLineItemsFromInvetory</h5>
+<span class='badge badge-success'>01.03.2026 10:26:29 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:30 am</span>
+<span class='badge badge-default'>00:00:01:064</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Assigning pro number to order</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:29 am</td>
+        <td>
+          Test Started: addProNumberToOrderThatHavingLineItemsFromInvetory
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:29 am</td>
+        <td>
+          Starting test: pro number assignmnet 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:30 am</td>
+        <td>
+          <span class='badge white-text green'>addProNumberToOrderThatHavingLineItemsFromInvetory - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:30 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:30 am</td>
+        <td>
+          <b>Status Code:</b> 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:30 am</td>
+        <td>
+          <b>Response Time:</b> 1017 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:30 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:30 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=877<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"36d-4NpZuC2xvgE0g8J+Paq/EKHD56I"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:30 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-3'></div>
+ <script>
+  function jsonTreeCreate3() { 
+   document.getElementById('code-block-json-3').innerHTML = JSONTree.create([
+    {
+        "id": "4c8ba354-9f4f-4986-9ff5-860c79175411",
+        "type": "PRO",
+        "number": "SH056225",
+        "sku": "E0X2-55-M1-3218",
+        "createdAt": "2026-01-03T04:56:29.997Z",
+        "updatedAt": "2026-01-03T04:56:29.997Z",
+        "status": "CREATED",
+        "addOn": null,
+        "quantity": 1,
+        "isPrinted": false,
+        "dispatchedAt": null,
+        "msc_sync_status": "pending"
+    },
+    {
+        "id": "a5e4b554-4c63-4970-be83-50b557b26eb1",
+        "type": "PRO",
+        "number": "SH056225",
+        "sku": "N4N4-87-M1-3132",
+        "createdAt": "2026-01-03T04:56:30.036Z",
+        "updatedAt": "2026-01-03T04:56:30.036Z",
+        "status": "CREATED",
+        "addOn": null,
+        "quantity": 1,
+        "isPrinted": false,
+        "dispatchedAt": null,
+        "msc_sync_status": "pending"
+    },
+    {
+        "id": "114746ba-8f4f-47b4-90dc-c2833a9344e8",
+        "type": "PRO",
+        "number": "SH056225",
+        "sku": "N4N4-87-M1-3132",
+        "createdAt": "2026-01-03T04:56:30.044Z",
+        "updatedAt": "2026-01-03T04:56:30.044Z",
+        "status": "CREATED",
+        "addOn": null,
+        "quantity": 1,
+        "isPrinted": false,
+        "dispatchedAt": null,
+        "msc_sync_status": "pending"
+    }
+]); 
+  }
+  jsonTreeCreate3();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">scanOutTheorderThatHavingAllLineItemsFromInventory</p>
+            <p class="text-sm">
+              <span>10:26:30 am</span> / <span>00:00:01:118</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">scanOutTheorderThatHavingAllLineItemsFromInventory</h5>
+<span class='badge badge-success'>01.03.2026 10:26:30 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:31 am</span>
+<span class='badge badge-default'>00:00:01:118</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Assigning pro number to inventory</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:30 am</td>
+        <td>
+          Test Started: scanOutTheorderThatHavingAllLineItemsFromInventory
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:30 am</td>
+        <td>
+          Starting test: starting scan out
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:31 am</td>
+        <td>
+          <span class='badge white-text green'>scanOutTheorderThatHavingAllLineItemsFromInventory - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:31 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:31 am</td>
+        <td>
+          <b>Status Code:</b> 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:31 am</td>
+        <td>
+          <b>Response Time:</b> 1107 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:31 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:31 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=161<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"a1-8ps5jSm51d9kleNzD95QzCayK6k"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:31 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-4'></div>
+ <script>
+  function jsonTreeCreate4() { 
+   document.getElementById('code-block-json-4').innerHTML = JSONTree.create({
+    "id": "1a120f46-b08d-496f-8b92-6c98937c69a2",
+    "remainingQuantity": "536",
+    "totalInventoryQuantity": "541",
+    "sku": "E0X2-55-M1-3218",
+    "location": "CA",
+    "binNumber": "A2-2"
+}); 
+  }
+  jsonTreeCreate4();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">scanOutTheorderThatHavingAllLineItemsFromInventory</p>
+            <p class="text-sm">
+              <span>10:26:31 am</span> / <span>00:00:01:211</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">scanOutTheorderThatHavingAllLineItemsFromInventory</h5>
+<span class='badge badge-success'>01.03.2026 10:26:31 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:32 am</span>
+<span class='badge badge-default'>00:00:01:211</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Assigning pro number to inventory</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:31 am</td>
+        <td>
+          Test Started: scanOutTheorderThatHavingAllLineItemsFromInventory
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:31 am</td>
+        <td>
+          Starting test: starting scan out
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:32 am</td>
+        <td>
+          <span class='badge white-text green'>scanOutTheorderThatHavingAllLineItemsFromInventory - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:32 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:32 am</td>
+        <td>
+          <b>Status Code:</b> 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:32 am</td>
+        <td>
+          <b>Response Time:</b> 1201 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:32 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:32 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=171<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"ab-wRCoJpYp9bVlYjzqfLfJ+w2ir0s"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:32 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-5'></div>
+ <script>
+  function jsonTreeCreate5() { 
+   document.getElementById('code-block-json-5').innerHTML = JSONTree.create({
+    "id": "6d6321a0-dc63-47a9-b250-b7a15a0dd844",
+    "remainingQuantity": "526",
+    "totalInventoryQuantity": "532",
+    "sku": "N4N4-87-M1-3132",
+    "location": "California",
+    "binNumber": "BIN224"
+}); 
+  }
+  jsonTreeCreate5();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">scanOutTheorderThatHavingAllLineItemsFromInventory</p>
+            <p class="text-sm">
+              <span>10:26:32 am</span> / <span>00:00:01:066</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">scanOutTheorderThatHavingAllLineItemsFromInventory</h5>
+<span class='badge badge-success'>01.03.2026 10:26:32 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:33 am</span>
+<span class='badge badge-default'>00:00:01:066</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Assigning pro number to inventory</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:32 am</td>
+        <td>
+          Test Started: scanOutTheorderThatHavingAllLineItemsFromInventory
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:32 am</td>
+        <td>
+          Starting test: starting scan out
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:33 am</td>
+        <td>
+          <span class='badge white-text green'>scanOutTheorderThatHavingAllLineItemsFromInventory - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:33 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:33 am</td>
+        <td>
+          <b>Status Code:</b> 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:33 am</td>
+        <td>
+          <b>Response Time:</b> 1057 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:33 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:33 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=171<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"ab-yn2WU5/7l+ozN5qep8BV/Esrljs"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:33 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-6'></div>
+ <script>
+  function jsonTreeCreate6() { 
+   document.getElementById('code-block-json-6').innerHTML = JSONTree.create({
+    "id": "6d6321a0-dc63-47a9-b250-b7a15a0dd844",
+    "remainingQuantity": "525",
+    "totalInventoryQuantity": "531",
+    "sku": "N4N4-87-M1-3132",
+    "location": "California",
+    "binNumber": "BIN224"
+}); 
+  }
+  jsonTreeCreate6();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">confirmOrderFromInbound</p>
+            <p class="text-sm">
+              <span>10:26:34 am</span> / <span>00:00:01:105</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">confirmOrderFromInbound</h5>
+<span class='badge badge-success'>01.03.2026 10:26:34 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:35 am</span>
+<span class='badge badge-default'>00:00:01:105</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Confirm order with inventtory </div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:34 am</td>
+        <td>
+          Test Started: confirmOrderFromInbound
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:34 am</td>
+        <td>
+          Starting test: confirming order
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:34 am</td>
+        <td>
+          Request Body: {order_number=ORD-f03f6dae, orderItems=[{order_item_id=lineItemId-1867fd34, eta=2025-11-05, qty=1, id=af2bfe6e-be8f-46c8-898e-dba83ef26859, sku=E4S4-95-M1-1104, type=inbound}]}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:35 am</td>
+        <td>
+          <span class='badge white-text green'>confirmOrderFromInbound - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:35 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:35 am</td>
+        <td>
+          <b>Status Code:</b> 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:35 am</td>
+        <td>
+          <b>Response Time:</b> 1081 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:35 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:35 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=1059<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"423-awfZGqF/ZnkicYgM7YWV473n9NI"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:35 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-7'></div>
+ <script>
+  function jsonTreeCreate7() { 
+   document.getElementById('code-block-json-7').innerHTML = JSONTree.create({
+    "status": "OK",
+    "orderNumber": "ORD-f03f6dae",
+    "orderId": "6d94375b-ac7c-4444-9ee2-ba6b50543837",
+    "isNewOrder": true,
+    "processedItems": [
+        {
+            "orderItemId": "lineItemId-1867fd34",
+            "orderItemRecordsCreated": 1,
+            "sku": "E4S4-95-M1-1104",
+            "qty": 1,
+            "type": "inbound",
+            "inboundId": "af2bfe6e-be8f-46c8-898e-dba83ef26859",
+            "status": "processed"
+        }
+    ],
+    "inventoryUpdates": [
+        {
+            "sku": "E4S4-95-M1-1104",
+            "type": "inbound",
+            "preBookedQuantity": 5,
+            "inboundId": "af2bfe6e-be8f-46c8-898e-dba83ef26859"
+        }
+    ],
+    "totalItems": 1,
+    "totalOrderItemRecords": 1,
+    "order": {
+        "id": "6d94375b-ac7c-4444-9ee2-ba6b50543837",
+        "orderNumber": "ORD-f03f6dae",
+        "status": "ordered",
+        "proNumber": null,
+        "orderItems": [
+            {
+                "id": "dd84fc04-7c07-449b-a4a5-9078a0d24ca3",
+                "orderId": "6d94375b-ac7c-4444-9ee2-ba6b50543837",
+                "shopifyOrderItemId": "lineItemId-1867fd34",
+                "sku": "E4S4-95-M1-1104",
+                "qty": 1,
+                "type": "inbound",
+                "eta": "2025-11-05",
+                "inboundId": "af2bfe6e-be8f-46c8-898e-dba83ef26859",
+                "createdAt": "2026-01-03T04:56:35.702Z",
+                "updatedAt": "2026-01-03T04:56:35.702Z"
+            }
+        ],
+        "createdAt": "2026-01-03T04:56:35.665Z",
+        "updatedAt": "2026-01-03T04:56:35.665Z",
+        "deletedAt": null
+    }
+}); 
+  }
+  jsonTreeCreate7();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">scanInTheSku</p>
+            <p class="text-sm">
+              <span>10:26:35 am</span> / <span>00:00:01:011</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">scanInTheSku</h5>
+<span class='badge badge-success'>01.03.2026 10:26:35 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:36 am</span>
+<span class='badge badge-default'>00:00:01:011</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Scan in the sku from inbound</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:35 am</td>
+        <td>
+          Test Started: scanInTheSku
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:35 am</td>
+        <td>
+          Starting test: scan in
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:35 am</td>
+        <td>
+          Request Body: [{quantity=1, containerNumber=containerEarly, binNumber=BIN-124, location=CA, sku=E4S4-95-M1-1104}]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:36 am</td>
+        <td>
+          <span class='badge white-text green'>scanInTheSku - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:36 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:36 am</td>
+        <td>
+          <b>Status Code:</b> 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:36 am</td>
+        <td>
+          <b>Response Time:</b> 1003 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:36 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:36 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=367<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"16f-IkWLiK8+hQau4Sy9WryHruR2Aoc"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:36 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-8'></div>
+ <script>
+  function jsonTreeCreate8() { 
+   document.getElementById('code-block-json-8').innerHTML = JSONTree.create({
+    "successfulScans": [
+        {
+            "id": "1c6411ac-13a2-48ea-b34f-ef5d1a749f47",
+            "inventoryId": "04d694e6-df18-4533-abce-c559eb57a8ae",
+            "sku": "E4S4-95-M1-1104",
+            "binNumber": "BIN-124",
+            "location": "CA",
+            "quantity": "18",
+            "totalQuantity": "27",
+            "createdAt": "2025-10-29T06:19:14.634Z",
+            "updatedAt": "2026-01-03T04:56:36.000Z"
+        }
+    ],
+    "failedScans": [
+        
+    ],
+    "totalProcessed": 1,
+    "successCount": 1,
+    "failureCount": 0
+}); 
+  }
+  jsonTreeCreate8();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">addProNumberToInboundLineItem</p>
+            <p class="text-sm">
+              <span>10:26:36 am</span> / <span>00:00:01:107</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">addProNumberToInboundLineItem</h5>
+<span class='badge badge-success'>01.03.2026 10:26:36 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:38 am</span>
+<span class='badge badge-default'>00:00:01:107</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Assigning pro number to order</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:36 am</td>
+        <td>
+          Test Started: addProNumberToInboundLineItem
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:36 am</td>
+        <td>
+          Starting test: pro number assignmnet 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:38 am</td>
+        <td>
+          <span class='badge white-text green'>addProNumberToInboundLineItem - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:38 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:38 am</td>
+        <td>
+          <b>Status Code:</b> 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:38 am</td>
+        <td>
+          <b>Response Time:</b> 1088 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:38 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:37 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=293<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"125-5J67M5NNwH8+Z1ZezcL72xPFht0"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:38 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-9'></div>
+ <script>
+  function jsonTreeCreate9() { 
+   document.getElementById('code-block-json-9').innerHTML = JSONTree.create([
+    {
+        "id": "b2a9327c-00ef-43c0-b723-eb5e57be1502",
+        "type": "PRO",
+        "number": "SH838795",
+        "sku": "E4S4-95-M1-1104",
+        "createdAt": "2026-01-03T04:56:37.826Z",
+        "updatedAt": "2026-01-03T04:56:37.826Z",
+        "status": "CREATED",
+        "addOn": null,
+        "quantity": 1,
+        "isPrinted": false,
+        "dispatchedAt": null,
+        "msc_sync_status": "pending"
+    }
+]); 
+  }
+  jsonTreeCreate9();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">scanOutTheOrderHavingLineItemFromInbound</p>
+            <p class="text-sm">
+              <span>10:26:38 am</span> / <span>00:00:01:225</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">scanOutTheOrderHavingLineItemFromInbound</h5>
+<span class='badge badge-success'>01.03.2026 10:26:38 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:39 am</span>
+<span class='badge badge-default'>00:00:01:225</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">scan out</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:38 am</td>
+        <td>
+          Test Started: scanOutTheOrderHavingLineItemFromInbound
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:38 am</td>
+        <td>
+          Starting test: starting scan out
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:39 am</td>
+        <td>
+          <span class='badge white-text green'>scanOutTheOrderHavingLineItemFromInbound - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:39 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:39 am</td>
+        <td>
+          <b>Status Code:</b> 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:39 am</td>
+        <td>
+          <b>Response Time:</b> 1219 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:39 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:39 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=162<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"a2-daG2+1O5V0VgiGAGKAA2GmZszLQ"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:39 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-10'></div>
+ <script>
+  function jsonTreeCreate10() { 
+   document.getElementById('code-block-json-10').innerHTML = JSONTree.create({
+    "id": "1c6411ac-13a2-48ea-b34f-ef5d1a749f47",
+    "remainingQuantity": "17",
+    "totalInventoryQuantity": "26",
+    "sku": "E4S4-95-M1-1104",
+    "location": "CA",
+    "binNumber": "BIN-124"
+}); 
+  }
+  jsonTreeCreate10();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">getAllInventoryBySKU</p>
+            <p class="text-sm">
+              <span>10:26:40 am</span> / <span>00:00:01:224</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">getAllInventoryBySKU</h5>
+<span class='badge badge-success'>01.03.2026 10:26:40 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:41 am</span>
+<span class='badge badge-default'>00:00:01:224</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Get sku detail</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:40 am</td>
+        <td>
+          Test Started: getAllInventoryBySKU
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:40 am</td>
+        <td>
+          Starting test: Get inventory by SKU E4E4-117-M1-1244
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:40 am</td>
+        <td>
+          Starting test: Get inventory by SKUE4E4-117-M1-1244
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:40 am</td>
+        <td>
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhiMDFmNDllLWQzMTAtNDM2OS1hMjcxLTRkM2IwYTE1Njc5cSIsImVtYWlsIjoiZGV2ZWxvcGVyQHNlY3VyZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJmdWxsTmFtZSI6IkRldmVsb3BlciIsImlhdCI6MTc2NzQxNjIwMCwiZXhwIjoxNzY4MDIxMDAwfQ.EMg4zWNlWdDdPtb7MlURsuSl5km0O2joXaP1CRa_FTs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:40 am</td>
+        <td>
+          Base URL: https://staging-inventory-api.myspacover.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:40 am</td>
+        <td>
+          Full URL will be: https://staging-inventory-api.myspacover.com/inventory/by-sku/E4E4-117-M1-1244
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:41 am</td>
+        <td>
+          Response:
+{
+    "data": {
+        "id": "a9d160a1-bed0-4c88-a85f-f164a2f85f30",
+        "sku": "E4E4-117-M1-1244",
+        "vendorDescription": "My Spa Cover HydroTex Pro - Brazilian Mahogany 84 x 84 x 11 x 7",
+        "length": "84",
+        "width": "84",
+        "radius": "11",
+        "skirt": "7",
+        "taper": "5\"-3\"",
+        "foamDensity": "1.5",
+        "stripInsert": null,
+        "shape": null,
+        "materialNumber": "1244",
+        "materialType": "Fabric",
+        "materialColor": "HydroTex Pro - Brazilian Mahogany",
+        "quantity": "199",
+        "allocatedQuantity": "0",
+        "inHandQuantity": "199",
+        "createdAt": "2025-09-30T11:12:55.434Z",
+        "updatedAt": "2026-01-03T04:56:28.000Z",
+        "inventoryLocations": [
+            {
+                "id": "adb7149a-ddfe-4e1e-b14c-70197cccbed6",
+                "inventoryId": "a9d160a1-bed0-4c88-a85f-f164a2f85f30",
+                "binNumber": "B2",
+                "location": "California",
+                "quantity": "199",
+                "createdAt": "2025-09-30T11:12:55.444Z",
+                "updatedAt": "2025-11-06T08:47:02.000Z"
+            }
+        ],
+        "deletedAt": null
+    }
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:41 am</td>
+        <td>
+          Successfully retrieved the sku sku detail in inventory
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:41 am</td>
+        <td>
+          <span class='badge white-text green'>getAllInventoryBySKU - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:41 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:41 am</td>
+        <td>
+          <b>Status Code:</b> 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:41 am</td>
+        <td>
+          <b>Response Time:</b> 1195 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:41 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:41 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=805<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"325-Eb5CDeYY0J8mLNkrPf4exBsLK/M"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:41 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-11'></div>
+ <script>
+  function jsonTreeCreate11() { 
+   document.getElementById('code-block-json-11').innerHTML = JSONTree.create({
+    "data": {
+        "id": "a9d160a1-bed0-4c88-a85f-f164a2f85f30",
+        "sku": "E4E4-117-M1-1244",
+        "vendorDescription": "My Spa Cover HydroTex Pro - Brazilian Mahogany 84 x 84 x 11 x 7",
+        "length": "84",
+        "width": "84",
+        "radius": "11",
+        "skirt": "7",
+        "taper": "5\"-3\"",
+        "foamDensity": "1.5",
+        "stripInsert": null,
+        "shape": null,
+        "materialNumber": "1244",
+        "materialType": "Fabric",
+        "materialColor": "HydroTex Pro - Brazilian Mahogany",
+        "quantity": "199",
+        "allocatedQuantity": "0",
+        "inHandQuantity": "199",
+        "createdAt": "2025-09-30T11:12:55.434Z",
+        "updatedAt": "2026-01-03T04:56:28.000Z",
+        "inventoryLocations": [
+            {
+                "id": "adb7149a-ddfe-4e1e-b14c-70197cccbed6",
+                "inventoryId": "a9d160a1-bed0-4c88-a85f-f164a2f85f30",
+                "binNumber": "B2",
+                "location": "California",
+                "quantity": "199",
+                "createdAt": "2025-09-30T11:12:55.444Z",
+                "updatedAt": "2025-11-06T08:47:02.000Z"
+            }
+        ],
+        "deletedAt": null
+    }
+}); 
+  }
+  jsonTreeCreate11();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">confirmOrderThatHavingLineItemFromInventoryInboundCustom</p>
+            <p class="text-sm">
+              <span>10:26:41 am</span> / <span>00:00:01:191</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">confirmOrderThatHavingLineItemFromInventoryInboundCustom</h5>
+<span class='badge badge-success'>01.03.2026 10:26:41 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:42 am</span>
+<span class='badge badge-default'>00:00:01:191</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Confirm order with inventtory </div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:41 am</td>
+        <td>
+          Test Started: confirmOrderThatHavingLineItemFromInventoryInboundCustom
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:41 am</td>
+        <td>
+          Starting test: confirming order
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:41 am</td>
+        <td>
+          Request Body: {order_number=ORD-25073747, orderItems=[{order_item_id=lineItemId-170552c9, qty=1, sku=E4E4-117-M1-1244, type=inventory}, {order_item_id=lineItemId-467ccf79, eta=2025-11-05, qty=1, id=af2bfe6e-be8f-46c8-898e-dba83ef26859, sku=E4S4-95-M1-1104, type=inbound}, {order_item_id=lineItemId-26235ee7, qty=1, sku=E4X6-117-M1-3132, type=custom}]}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:42 am</td>
+        <td>
+          <span class='badge white-text green'>confirmOrderThatHavingLineItemFromInventoryInboundCustom - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:42 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:42 am</td>
+        <td>
+          <b>Status Code:</b> 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:42 am</td>
+        <td>
+          <b>Response Time:</b> 1158 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:42 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:42 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=2110<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"83e-Zps5MXCqSq3gtNzgBuYbvX7TYKU"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:42 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-12'></div>
+ <script>
+  function jsonTreeCreate12() { 
+   document.getElementById('code-block-json-12').innerHTML = JSONTree.create({
+    "status": "OK",
+    "orderNumber": "ORD-25073747",
+    "orderId": "6f1aafa0-d945-464d-a8bb-251d45a0476d",
+    "isNewOrder": true,
+    "processedItems": [
+        {
+            "orderItemId": "lineItemId-170552c9",
+            "orderItemRecordsCreated": 1,
+            "sku": "E4E4-117-M1-1244",
+            "qty": 1,
+            "type": "inventory",
+            "status": "processed"
+        },
+        {
+            "orderItemId": "lineItemId-467ccf79",
+            "orderItemRecordsCreated": 1,
+            "sku": "E4S4-95-M1-1104",
+            "qty": 1,
+            "type": "inbound",
+            "inboundId": "af2bfe6e-be8f-46c8-898e-dba83ef26859",
+            "status": "processed"
+        },
+        {
+            "orderItemId": "lineItemId-26235ee7",
+            "orderItemRecordsCreated": 1,
+            "sku": "E4X6-117-M1-3132",
+            "qty": 1,
+            "type": "custom",
+            "status": "processed",
+            "customOrderId": "070cbfe9-6b26-4989-a740-38b8c1d2b19e"
+        }
+    ],
+    "inventoryUpdates": [
+        {
+            "sku": "E4E4-117-M1-1244",
+            "type": "inventory",
+            "inHandQuantity": 198,
+            "allocatedQuantity": 1
+        },
+        {
+            "sku": "E4S4-95-M1-1104",
+            "type": "inbound",
+            "preBookedQuantity": 5,
+            "inboundId": "af2bfe6e-be8f-46c8-898e-dba83ef26859"
+        },
+        {
+            "sku": "E4X6-117-M1-3132",
+            "type": "custom"
+        }
+    ],
+    "totalItems": 3,
+    "totalOrderItemRecords": 3,
+    "order": {
+        "id": "6f1aafa0-d945-464d-a8bb-251d45a0476d",
+        "orderNumber": "ORD-25073747",
+        "status": "ordered",
+        "proNumber": null,
+        "orderItems": [
+            {
+                "id": "6ce843e5-48a6-45e9-97f1-2db14c93eb61",
+                "orderId": "6f1aafa0-d945-464d-a8bb-251d45a0476d",
+                "shopifyOrderItemId": "lineItemId-467ccf79",
+                "sku": "E4S4-95-M1-1104",
+                "qty": 1,
+                "type": "inbound",
+                "eta": "2025-11-05",
+                "inboundId": "af2bfe6e-be8f-46c8-898e-dba83ef26859",
+                "createdAt": "2026-01-03T04:56:42.475Z",
+                "updatedAt": "2026-01-03T04:56:42.475Z"
+            },
+            {
+                "id": "e8176a12-14d2-46b7-b276-cc5b45cf8323",
+                "orderId": "6f1aafa0-d945-464d-a8bb-251d45a0476d",
+                "shopifyOrderItemId": "lineItemId-26235ee7",
+                "sku": "E4X6-117-M1-3132",
+                "qty": 1,
+                "type": "custom",
+                "eta": null,
+                "inboundId": null,
+                "createdAt": "2026-01-03T04:56:42.490Z",
+                "updatedAt": "2026-01-03T04:56:42.490Z"
+            },
+            {
+                "id": "f2d5fb56-49cd-468e-868c-e2bca13434dc",
+                "orderId": "6f1aafa0-d945-464d-a8bb-251d45a0476d",
+                "shopifyOrderItemId": "lineItemId-170552c9",
+                "sku": "E4E4-117-M1-1244",
+                "qty": 1,
+                "type": "inventory",
+                "eta": null,
+                "inboundId": null,
+                "createdAt": "2026-01-03T04:56:42.449Z",
+                "updatedAt": "2026-01-03T04:56:42.449Z"
+            }
+        ],
+        "createdAt": "2026-01-03T04:56:42.433Z",
+        "updatedAt": "2026-01-03T04:56:42.433Z",
+        "deletedAt": null
+    }
+}); 
+  }
+  jsonTreeCreate12();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">scanIn</p>
+            <p class="text-sm">
+              <span>10:26:42 am</span> / <span>00:00:01:020</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">scanIn</h5>
+<span class='badge badge-success'>01.03.2026 10:26:42 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:43 am</span>
+<span class='badge badge-default'>00:00:01:020</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Scan in the sku from inbound</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:42 am</td>
+        <td>
+          Test Started: scanIn
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:42 am</td>
+        <td>
+          Starting test: scan in
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:42 am</td>
+        <td>
+          Request Body: [{quantity=1, containerNumber=containerEarly, binNumber=BIN-124, location=CA, sku=E4S4-95-M1-1104}]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:43 am</td>
+        <td>
+          <span class='badge white-text green'>scanIn - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:43 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:43 am</td>
+        <td>
+          <b>Status Code:</b> 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:43 am</td>
+        <td>
+          <b>Response Time:</b> 1015 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:43 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:43 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=367<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"16f-h3yOXazz7WqFRzlTkUIsgIdwPnw"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:43 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-13'></div>
+ <script>
+  function jsonTreeCreate13() { 
+   document.getElementById('code-block-json-13').innerHTML = JSONTree.create({
+    "successfulScans": [
+        {
+            "id": "1c6411ac-13a2-48ea-b34f-ef5d1a749f47",
+            "inventoryId": "04d694e6-df18-4533-abce-c559eb57a8ae",
+            "sku": "E4S4-95-M1-1104",
+            "binNumber": "BIN-124",
+            "location": "CA",
+            "quantity": "18",
+            "totalQuantity": "27",
+            "createdAt": "2025-10-29T06:19:14.634Z",
+            "updatedAt": "2026-01-03T04:56:43.000Z"
+        }
+    ],
+    "failedScans": [
+        
+    ],
+    "totalProcessed": 1,
+    "successCount": 1,
+    "failureCount": 0
+}); 
+  }
+  jsonTreeCreate13();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">orderUpdateChangingTheSku</p>
+            <p class="text-sm">
+              <span>10:26:43 am</span> / <span>00:00:01:061</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">orderUpdateChangingTheSku</h5>
+<span class='badge badge-success'>01.03.2026 10:26:43 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:44 am</span>
+<span class='badge badge-default'>00:00:01:061</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Order Update changing the order line item sku</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:43 am</td>
+        <td>
+          Test Started: orderUpdateChangingTheSku
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:43 am</td>
+        <td>
+          Starting test: reversing booked SKU quantity
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:43 am</td>
+        <td>
+          Request Body: {oldOrder={orderItems=[{order_item_id=lineItemId-170552c9, qty=1, sku=E4E4-117-M1-1244, type=inventory}]}, order_number=ORD-25073747, newOrder={orderItems=[{order_item_id=lineItemId-170552c9, qty=1, sku=E0X2-55-M1-3218, type=inventory}]}}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:44 am</td>
+        <td>
+          <span class='badge white-text green'>orderUpdateChangingTheSku - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:44 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:44 am</td>
+        <td>
+          <b>Status Code:</b> 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:44 am</td>
+        <td>
+          <b>Response Time:</b> 1051 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:44 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:44 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=2813<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"afd-OkF/PfFz170pD8GD/ARm6yUFvYI"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:44 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-14'></div>
+ <script>
+  function jsonTreeCreate14() { 
+   document.getElementById('code-block-json-14').innerHTML = JSONTree.create({
+    "status": "OK",
+    "orderNumber": "ORD-25073747",
+    "reversed": [
+        {
+            "sku": "E4E4-117-M1-1244",
+            "qty": 1,
+            "type": "inventory",
+            "result": {
+                "sku": "E4E4-117-M1-1244",
+                "reversed": {
+                    "inHandQuantity": 199,
+                    "allocatedQuantity": 0
+                },
+                "data": {
+                    "id": "a9d160a1-bed0-4c88-a85f-f164a2f85f30",
+                    "sku": "E4E4-117-M1-1244",
+                    "vendorDescription": "My Spa Cover HydroTex Pro - Brazilian Mahogany 84 x 84 x 11 x 7",
+                    "length": "84",
+                    "width": "84",
+                    "radius": "11",
+                    "skirt": "7",
+                    "taper": "5\"-3\"",
+                    "foamDensity": "1.5",
+                    "stripInsert": null,
+                    "shape": null,
+                    "materialNumber": "1244",
+                    "materialType": "Fabric",
+                    "materialColor": "HydroTex Pro - Brazilian Mahogany",
+                    "quantity": "199",
+                    "allocatedQuantity": "0",
+                    "inHandQuantity": "199",
+                    "createdAt": "2025-09-30T11:12:55.434Z",
+                    "updatedAt": "2026-01-03T04:56:44.000Z",
+                    "deletedAt": null
+                }
+            }
+        }
+    ],
+    "applied": [
+        {
+            "sku": "E0X2-55-M1-3218",
+            "qty": 1,
+            "type": "inventory",
+            "orderItemRecordsCreated": 1,
+            "result": {
+                "sku": "E0X2-55-M1-3218",
+                "applied": {
+                    "inHandQuantity": 535,
+                    "allocatedQuantity": 6
+                },
+                "data": {
+                    "id": "d48e1e91-9632-4be6-8577-ade83ce553c4",
+                    "sku": "E0X2-55-M1-3218",
+                    "vendorDescription": "My Spa Cover Mayan Brown 80 x 62 x 5 x 5",
+                    "length": "80",
+                    "width": "62",
+                    "radius": "5",
+                    "skirt": "5",
+                    "taper": "5\"-3\"",
+                    "foamDensity": "1.5",
+                    "stripInsert": "",
+                    "shape": "Rectangle Rounded",
+                    "materialNumber": "3218",
+                    "materialType": "Vinyl",
+                    "materialColor": "Mayan Brown",
+                    "quantity": "541",
+                    "allocatedQuantity": "6",
+                    "inHandQuantity": "535",
+                    "createdAt": "2025-09-06T06:23:38.715Z",
+                    "updatedAt": "2026-01-03T04:56:44.000Z",
+                    "deletedAt": null
+                }
+            }
+        }
+    ],
+    "summary": {
+        "orderNumber": "ORD-25073747",
+        "itemsSummary": [
+            {
+                "sku": "E0X2-55-M1-3218",
+                "oldQty": 0,
+                "newQty": 1,
+                "quantityChange": 1,
+                "oldType": "N/A",
+                "newType": "inventory",
+                "typeChanged": true
+            }
+        ],
+        "totalOldItems": 1,
+        "totalNewItems": 1
+    },
+    "order": {
+        "id": "6f1aafa0-d945-464d-a8bb-251d45a0476d",
+        "orderNumber": "ORD-25073747",
+        "status": "ordered",
+        "proNumber": null,
+        "orderItems": [
+            {
+                "id": "2526aeaf-e6a3-46df-93b7-de7f96514fef",
+                "orderId": "6f1aafa0-d945-464d-a8bb-251d45a0476d",
+                "shopifyOrderItemId": "lineItemId-170552c9",
+                "sku": "E0X2-55-M1-3218",
+                "qty": 1,
+                "type": "inventory",
+                "eta": null,
+                "inboundId": null,
+                "createdAt": "2026-01-03T04:56:44.606Z",
+                "updatedAt": "2026-01-03T04:56:44.606Z"
+            },
+            {
+                "id": "6ce843e5-48a6-45e9-97f1-2db14c93eb61",
+                "orderId": "6f1aafa0-d945-464d-a8bb-251d45a0476d",
+                "shopifyOrderItemId": "lineItemId-467ccf79",
+                "sku": "E4S4-95-M1-1104",
+                "qty": 1,
+                "type": "inbound",
+                "eta": "2025-11-05",
+                "inboundId": "af2bfe6e-be8f-46c8-898e-dba83ef26859",
+                "createdAt": "2026-01-03T04:56:42.475Z",
+                "updatedAt": "2026-01-03T04:56:42.475Z"
+            },
+            {
+                "id": "e8176a12-14d2-46b7-b276-cc5b45cf8323",
+                "orderId": "6f1aafa0-d945-464d-a8bb-251d45a0476d",
+                "shopifyOrderItemId": "lineItemId-26235ee7",
+                "sku": "E4X6-117-M1-3132",
+                "qty": 1,
+                "type": "custom",
+                "eta": null,
+                "inboundId": null,
+                "createdAt": "2026-01-03T04:56:42.490Z",
+                "updatedAt": "2026-01-03T04:56:42.490Z"
+            }
+        ],
+        "createdAt": "2026-01-03T04:56:42.433Z",
+        "updatedAt": "2026-01-03T04:56:42.433Z",
+        "deletedAt": null
+    }
+}); 
+  }
+  jsonTreeCreate14();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">addProNumberToTheOrderHavingLineItemsFromInventortInboundCustom</p>
+            <p class="text-sm">
+              <span>10:26:44 am</span> / <span>00:00:01:141</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">addProNumberToTheOrderHavingLineItemsFromInventortInboundCustom</h5>
+<span class='badge badge-success'>01.03.2026 10:26:44 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:45 am</span>
+<span class='badge badge-default'>00:00:01:141</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Assigning pro number to order</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:44 am</td>
+        <td>
+          Test Started: addProNumberToTheOrderHavingLineItemsFromInventortInboundCustom
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:44 am</td>
+        <td>
+          Starting test: pro number assignmnet 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:45 am</td>
+        <td>
+          <span class='badge white-text green'>addProNumberToTheOrderHavingLineItemsFromInventortInboundCustom - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:45 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:45 am</td>
+        <td>
+          <b>Status Code:</b> 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:45 am</td>
+        <td>
+          <b>Response Time:</b> 1113 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:45 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:45 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=585<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"249-p3FKN8MG5SURakrdx0RNhJzqBjY"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:45 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-15'></div>
+ <script>
+  function jsonTreeCreate15() { 
+   document.getElementById('code-block-json-15').innerHTML = JSONTree.create([
+    {
+        "id": "30587405-88e7-44d8-b3e8-14bcf5b9916e",
+        "type": "PRO",
+        "number": "SH615799",
+        "sku": "E0X2-55-M1-3218",
+        "createdAt": "2026-01-03T04:56:45.702Z",
+        "updatedAt": "2026-01-03T04:56:45.702Z",
+        "status": "CREATED",
+        "addOn": null,
+        "quantity": 1,
+        "isPrinted": false,
+        "dispatchedAt": null,
+        "msc_sync_status": "pending"
+    },
+    {
+        "id": "b2ee40b8-8001-4c4b-ba31-52cd80500790",
+        "type": "PRO",
+        "number": "SH615799",
+        "sku": "E4S4-95-M1-1104",
+        "createdAt": "2026-01-03T04:56:45.727Z",
+        "updatedAt": "2026-01-03T04:56:45.727Z",
+        "status": "CREATED",
+        "addOn": null,
+        "quantity": 1,
+        "isPrinted": false,
+        "dispatchedAt": null,
+        "msc_sync_status": "pending"
+    }
+]); 
+  }
+  jsonTreeCreate15();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">scanOut</p>
+            <p class="text-sm">
+              <span>10:26:45 am</span> / <span>00:00:01:013</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">scanOut</h5>
+<span class='badge badge-success'>01.03.2026 10:26:45 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:46 am</span>
+<span class='badge badge-default'>00:00:01:013</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Assigning pro number to inventory</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:45 am</td>
+        <td>
+          Test Started: scanOut
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:45 am</td>
+        <td>
+          Starting test: starting scan out
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:46 am</td>
+        <td>
+          <span class='badge white-text green'>scanOut - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:46 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:46 am</td>
+        <td>
+          <b>Status Code:</b> 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:46 am</td>
+        <td>
+          <b>Response Time:</b> 1006 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:46 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:46 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=161<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"a1-0RNbRjgzmFhg6pmIuCGt7eIh2gM"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:46 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-16'></div>
+ <script>
+  function jsonTreeCreate16() { 
+   document.getElementById('code-block-json-16').innerHTML = JSONTree.create({
+    "id": "1a120f46-b08d-496f-8b92-6c98937c69a2",
+    "remainingQuantity": "535",
+    "totalInventoryQuantity": "540",
+    "sku": "E0X2-55-M1-3218",
+    "location": "CA",
+    "binNumber": "A2-2"
+}); 
+  }
+  jsonTreeCreate16();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">scanOut</p>
+            <p class="text-sm">
+              <span>10:26:46 am</span> / <span>00:00:01:256</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">scanOut</h5>
+<span class='badge badge-success'>01.03.2026 10:26:46 am</span>
+<span class='badge badge-danger'>01.03.2026 10:26:48 am</span>
+<span class='badge badge-default'>00:00:01:256</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Assigning pro number to inventory</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:46 am</td>
+        <td>
+          Test Started: scanOut
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:46 am</td>
+        <td>
+          Starting test: starting scan out
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:48 am</td>
+        <td>
+          <span class='badge white-text green'>scanOut - PASSED</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:48 am</td>
+        <td>
+          Test Passed Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:48 am</td>
+        <td>
+          <b>Status Code:</b> 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:48 am</td>
+        <td>
+          <b>Response Time:</b> 1249 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:48 am</td>
+        <td>
+          <b>Response Headers:</b><br>Server=nginx/1.22.1<br>Date=Sat, 03 Jan 2026 04:56:48 GMT<br>Content-Type=application/json; charset=utf-8<br>Content-Length=162<br>Connection=keep-alive<br>X-Powered-By=Express<br>Access-Control-Allow-Origin=*<br>ETag=W/"a2-daG2+1O5V0VgiGAGKAA2GmZszLQ"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:26:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-17'></div>
+ <script>
+  function jsonTreeCreate17() { 
+   document.getElementById('code-block-json-17').innerHTML = JSONTree.create({
+    "id": "1c6411ac-13a2-48ea-b34f-ef5d1a749f47",
+    "remainingQuantity": "17",
+    "totalInventoryQuantity": "26",
+    "sku": "E4S4-95-M1-1104",
+    "location": "CA",
+    "binNumber": "BIN-124"
+}); 
+  }
+  jsonTreeCreate17();
+ </script>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jan 3, 2026 10:26:22 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jan 3, 2026 10:26:48 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>18</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>18</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='23%'><b>38</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>125</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"getAllInventoryBySKU":1.211,"confirmOrderAllLineItmesArefromInventory":1.381,"orderUpdateChangingOneLineItemUpdatingTheSku":1.165,"addProNumberToOrderThatHavingLineItemsFromInvetory":1.064,"scanOutTheorderThatHavingAllLineItemsFromInventory":1.118,"scanOutTheorderThatHavingAllLineItemsFromInventory":1.211,"scanOutTheorderThatHavingAllLineItemsFromInventory":1.066,"confirmOrderFromInbound":1.105,"scanInTheSku":1.011,"addProNumberToInboundLineItem":1.107,"scanOutTheOrderHavingLineItemFromInbound":1.225,"getAllInventoryBySKU":1.224,"confirmOrderThatHavingLineItemFromInventoryInboundCustom":1.191,"scanIn":1.02,"orderUpdateChangingTheSku":1.061,"addProNumberToTheOrderHavingLineItemsFromInventortInboundCustom":1.141,"scanOut":1.013,"scanOut":1.256
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Application</td>
+<td>SpaCover API</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>qa</td>
+</tr>
+<tr>
+<td>Base URL</td>
+<td>https://staging-inventory-api.myspacover.com</td>
+</tr>
+<tr>
+<td>Tester</td>
+<td>yeshsharma</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Mac OS X</td>
+</tr>
+<tr>
+<td>Java Version</td>
+<td>17.0.11</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 18,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 38,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 125
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

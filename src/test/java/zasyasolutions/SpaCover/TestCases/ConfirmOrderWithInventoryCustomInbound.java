@@ -63,25 +63,6 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 		logPass("Successfully retrieved the sku sku detail in inventory");
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 	 @Test(priority = 2, description = "Confirm order with inventtory ")
 	public void confirmOrderThatHavingLineItemFromInventoryInboundCustom() {
 		logInfo("Starting test: confirming order");
@@ -152,6 +133,7 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 				+ response.getStatusCode() + ". Response: " + response.getBody().asString());
 	}
 
+	 
 	 @Test(priority = 3, description = "Scan in the sku from inbound")
 	 public void scanIn() {
 	     logInfo("Starting test: scan in");
@@ -183,18 +165,7 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 	     System.out.println("Response Body:");
 	     response.prettyPrint();
 	 }
-
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
+ 
 	 @Test(priority = 4, description = "Order Update changing the order line item sku")
 	public void orderUpdateChangingTheSku() {
 		logInfo("Starting test: reversing booked SKU quantity");
@@ -242,6 +213,7 @@ public class ConfirmOrderWithInventoryCustomInbound extends BaseTest {
 		System.out.println("Response Body:");
 		response.prettyPrint();
 	}
+	 
 	 
 	 @Test(priority = 5, description = "Assigning pro number to order")
 	 public void addProNumberToTheOrderHavingLineItemsFromInventortInboundCustom() {

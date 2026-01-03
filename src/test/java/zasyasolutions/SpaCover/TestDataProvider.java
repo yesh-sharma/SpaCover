@@ -72,6 +72,63 @@ public class TestDataProvider {
         };
     }
     
+    
+
+    @DataProvider(name = "proData")
+    public Object[][] provideProData() {
+        // We won't bind SharedData.proNumber here (it may still be null)
+        return new Object[][] {
+            { "1a120f46-b08d-496f-8b92-6c98937c69a2", "1" },
+            { "6d6321a0-dc63-47a9-b250-b7a15a0dd844", "1" },
+            { "6d6321a0-dc63-47a9-b250-b7a15a0dd844", "1" },
+        };
+    }
+    
+    @DataProvider(name = "sku")
+    public Object[][] skuData() {
+        return new Object[][] {
+            {"N4N4-87-M1-3132"},
+           
+        };
+    }
+    
+    @DataProvider(name = "proDataForInbound")
+    public Object[][] provideProDataForInbound() {
+        // We won't bind SharedData.proNumber here (it may still be null)
+        return new Object[][] {
+            { "1c6411ac-13a2-48ea-b34f-ef5d1a749f47", "1" }     
+        };
+    }
+    
+    @DataProvider(name = "skuInbound")
+    public Object[][] skuDataforInbound() {
+        return new Object[][] {
+            {"E4S4-95-M1-1104"},
+           
+        };
+    }
+    
+    
+    @DataProvider(name = "skuInventoryInboundCustom")
+    public Object[][] skuDataforInventoryInboundCustom() {
+        return new Object[][] {
+            {"E4E4-117-M1-1244"},
+           
+        };
+    }
+    
+    @DataProvider(name = "proDataForInboundInventoryCustom")
+    public Object[][] provideProDataForInboundInventoryCustom() {
+        // We won't bind SharedData.proNumber here (it may still be null)
+        return new Object[][] {
+            { "1a120f46-b08d-496f-8b92-6c98937c69a2", "1" },
+            { "1c6411ac-13a2-48ea-b34f-ef5d1a749f47", "1" }
+        };
+    }
+    
+    
+    
+    
     /**
      * Load test data from JSON file
      */

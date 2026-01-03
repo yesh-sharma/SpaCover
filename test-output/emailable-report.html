@@ -8,71 +8,28 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">965</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">18</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">26,898</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">zasyasolutions.SpaCover.TestCases.InventoryApiTestCases</td><td><a href="#m0">getSkuDetailsInOurRecords</a></td><td rowspan="1">1761827332734</td><td rowspan="1">946</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory</td><td><a href="#m0">addProNumberToOrderThatHavingLineItemsFromInvetory</a></td><td rowspan="1">1767434889093</td><td rowspan="1">1206</td></tr><tr class="passedeven"><td><a href="#m1">confirmOrderAllLineItmesArefromInventory</a></td><td rowspan="1">1767434886542</td><td rowspan="1">1528</td></tr><tr class="passedeven"><td><a href="#m2">getAllInventoryBySKU</a></td><td rowspan="1">1767434884770</td><td rowspan="1">1726</td></tr><tr class="passedeven"><td><a href="#m3">orderUpdateChangingOneLineItemUpdatingTheSku</a></td><td rowspan="1">1767434888073</td><td rowspan="1">1012</td></tr><tr class="passedeven"><td><a href="#m4">scanOutTheorderThatHavingAllLineItemsFromInventory</a></td><td rowspan="3">1767434890302</td><td rowspan="3">1106</td></tr><tr class="passedeven"><td><a href="#m5">scanOutTheorderThatHavingAllLineItemsFromInventory</a></td></tr><tr class="passedeven"><td><a href="#m6">scanOutTheorderThatHavingAllLineItemsFromInventory</a></td></tr><tr class="passedodd"><td rowspan="4">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound</td><td><a href="#m7">addProNumberToInboundLineItem</a></td><td rowspan="1">1767434897164</td><td rowspan="1">1230</td></tr><tr class="passedodd"><td><a href="#m8">confirmOrderFromInbound</a></td><td rowspan="1">1767434894843</td><td rowspan="1">1118</td></tr><tr class="passedodd"><td><a href="#m9">scanInTheSku</a></td><td rowspan="1">1767434895965</td><td rowspan="1">1189</td></tr><tr class="passedodd"><td><a href="#m10">scanOutTheOrderHavingLineItemFromInbound</a></td><td rowspan="1">1767434898398</td><td rowspan="1">1416</td></tr><tr class="passedeven"><td rowspan="7">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound</td><td><a href="#m11">addProNumberToTheOrderHavingLineItemsFromInventortInboundCustom</a></td><td rowspan="1">1767434906304</td><td rowspan="1">1159</td></tr><tr class="passedeven"><td><a href="#m12">confirmOrderThatHavingLineItemFromInventoryInboundCustom</a></td><td rowspan="1">1767434902924</td><td rowspan="1">1228</td></tr><tr class="passedeven"><td><a href="#m13">getAllInventoryBySKU</a></td><td rowspan="1">1767434901771</td><td rowspan="1">1151</td></tr><tr class="passedeven"><td><a href="#m14">orderUpdateChangingTheSku</a></td><td rowspan="1">1767434905250</td><td rowspan="1">1048</td></tr><tr class="passedeven"><td><a href="#m15">scanIn</a></td><td rowspan="1">1767434904155</td><td rowspan="1">1087</td></tr><tr class="passedeven"><td><a href="#m16">scanOut</a></td><td rowspan="2">1767434907465</td><td rowspan="2">1081</td></tr><tr class="passedeven"><td><a href="#m17">scanOut</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">zasyasolutions.SpaCover.TestCases.InventoryApiTestCases#getSkuDetailsInOurRecords</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{sku=[E4E4-1, E5E4-1, E3E4-1, E6E4-1, E4E5-1, E4E3-1, E4E6-1, E5E5-1, E3E3-1, E6E6-1, E5E3-1, E5E6-1, E3E5-1, E6E5-1]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
-JSON path inventory.sku doesn&apos;t match.
-Expected: E4E4-1
-  Actual: &lt;[E4E4-115-M1-1104, E4E4-115-M1-1239, E4E4-115-M1-1244, E4E4-115-M1-3132, E4E4-115-M1-3218, E4E4-115-M1-3221, E4E4-115-T1-1104, E4E4-115-T1-1239, E4E4-115-T1-1244, E4E4-115-T1-3132, E4E4-115-T1-3218, E4E4-115-T1-3221, E4E4-117-M1-1239, E4E4-117-M1-1244, E4E4-165-M1-1104, E4E4-165-M1-1239, E4E4-165-M1-3132, E4E4-165-M1-3218]&gt;
-
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
-	at io.restassured.specification.ResponseSpecification$body$2.callCurrent(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:212)
-	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
-	at zasyasolutions.SpaCover.APIHelper.validateJsonFieldValue(APIHelper.java:71)
-	at zasyasolutions.SpaCover.TestCases.InventoryApiTestCases.getSkuDetailsInOurRecords(InventoryApiTestCases.java:93)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory#addProNumberToOrderThatHavingLineItemsFromInvetory</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory#confirmOrderAllLineItmesArefromInventory</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory#getAllInventoryBySKU</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>N4N4-87-M1-3132</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory#orderUpdateChangingOneLineItemUpdatingTheSku</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory#scanOutTheorderThatHavingAllLineItemsFromInventory</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>1a120f46-b08d-496f-8b92-6c98937c69a2</td><td>1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory#scanOutTheorderThatHavingAllLineItemsFromInventory</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>6d6321a0-dc63-47a9-b250-b7a15a0dd844</td><td>1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">zasyasolutions.SpaCover.TestCases.ConfirmOrderApiWithInventory#scanOutTheorderThatHavingAllLineItemsFromInventory</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>6d6321a0-dc63-47a9-b250-b7a15a0dd844</td><td>1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound#addProNumberToInboundLineItem</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound#confirmOrderFromInbound</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound#scanInTheSku</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInBound#scanOutTheOrderHavingLineItemFromInbound</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>1c6411ac-13a2-48ea-b34f-ef5d1a749f47</td><td>1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound#addProNumberToTheOrderHavingLineItemsFromInventortInboundCustom</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound#confirmOrderThatHavingLineItemFromInventoryInboundCustom</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound#getAllInventoryBySKU</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>E4E4-117-M1-1244</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound#orderUpdateChangingTheSku</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound#scanIn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound#scanOut</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>1a120f46-b08d-496f-8b92-6c98937c69a2</td><td>1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">zasyasolutions.SpaCover.TestCases.ConfirmOrderWithInventoryCustomInbound#scanOut</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>1c6411ac-13a2-48ea-b34f-ef5d1a749f47</td><td>1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
